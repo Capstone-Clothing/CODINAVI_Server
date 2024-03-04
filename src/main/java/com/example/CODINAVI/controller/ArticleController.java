@@ -1,6 +1,7 @@
 package com.example.CODINAVI.controller;
 
 import com.example.CODINAVI.dto.ArticleForm;
+import com.example.CODINAVI.entity.Article;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +15,7 @@ public class ArticleController {
     @PostMapping("/articles/create")
     public String createArticle(ArticleForm form) {
         System.out.println(form.toString());
+        Article article = form.toEntity();
         return "";
     }
 }
