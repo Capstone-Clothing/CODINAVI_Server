@@ -1,5 +1,6 @@
 package com.example.CODINAVI.controller;
 
+import com.example.CODINAVI.entity.Codi;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,15 +17,4 @@ public class CodiController {
         return codi;
     }
 
-    static class Codi {
-        private String name;
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name + "hihi";
-        }
-    }
 }

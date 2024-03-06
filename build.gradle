@@ -25,6 +25,8 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
+	implementation group: 'org.tensorflow', name: 'tensorflow-core-api', version: '0.2.0'
+	implementation group: 'org.tensorflow', name: 'tensorflow-core-platform', version: '0.2.0'
 }
 
 tasks.named('test') {
