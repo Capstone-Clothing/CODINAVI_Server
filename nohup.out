@@ -1,0 +1,99 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2024-03-08T23:16:08.476Z  INFO 2784 --- [           main] c.example.CODINAVI.CodinaviApplication   : Starting CodinaviApplication v0.0.1-SNAPSHOT using Java 17.0.10 with PID 2784 (/home/ec2-user/PracticeSpringBoot/build/libs/CODINAVI-0.0.1-SNAPSHOT.jar started by ec2-user in /home/ec2-user/PracticeSpringBoot)
+2024-03-08T23:16:08.479Z  INFO 2784 --- [           main] c.example.CODINAVI.CodinaviApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-08T23:16:10.199Z  INFO 2784 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08T23:16:10.249Z  INFO 2784 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 0 JPA repository interfaces.
+2024-03-08T23:16:11.668Z  INFO 2784 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-08T23:16:11.737Z  INFO 2784 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-08T23:16:11.737Z  INFO 2784 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-03-08T23:16:12.017Z  INFO 2784 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-08T23:16:12.019Z  INFO 2784 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3395 ms
+2024-03-08T23:16:12.765Z  INFO 2784 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-08T23:16:13.157Z  INFO 2784 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:8729c810-5151-4310-9531-919ba2fc20d1 user=SA
+2024-03-08T23:16:13.159Z  INFO 2784 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-08T23:16:13.263Z  INFO 2784 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08T23:16:13.392Z  INFO 2784 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2024-03-08T23:16:13.394Z  INFO 2784 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-03-08T23:16:13.698Z  INFO 2784 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-03-08T23:16:14.054Z  INFO 2784 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-08T23:16:14.163Z  INFO 2784 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.H2Dialect, version: 2.1.214
+2024-03-08T23:16:14.544Z  INFO 2784 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-03-08T23:16:15.344Z  INFO 2784 --- [           main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.example.CODINAVI.entity.Article (class must be instantiated by Interceptor)
+2024-03-08T23:16:15.706Z  INFO 2784 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08T23:16:15.785Z  INFO 2784 --- [           main] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+2024-03-08T23:16:15.788Z  INFO 2784 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08T23:16:15.907Z  WARN 2784 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08T23:16:16.853Z  INFO 2784 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-08T23:16:16.918Z  INFO 2784 --- [           main] c.example.CODINAVI.CodinaviApplication   : Started CodinaviApplication in 9.456 seconds (process running for 10.63)
+2024-03-08T23:16:21.088Z  INFO 2784 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08T23:16:21.088Z  INFO 2784 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-08T23:16:21.092Z  INFO 2784 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-03-08T23:21:13.944Z  INFO 2784 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08T23:21:13.945Z  INFO 2784 --- [ionShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-03-08T23:21:13.958Z  INFO 2784 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-08T23:21:13.971Z  INFO 2784 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2024-03-08T23:27:06.602Z  INFO 2346 --- [           main] c.example.CODINAVI.CodinaviApplication   : Starting CodinaviApplication v0.0.1-SNAPSHOT using Java 17.0.10 with PID 2346 (/home/ec2-user/PracticeSpringBoot/build/libs/CODINAVI-0.0.1-SNAPSHOT.jar started by ec2-user in /home/ec2-user/PracticeSpringBoot)
+2024-03-08T23:27:06.605Z  INFO 2346 --- [           main] c.example.CODINAVI.CodinaviApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-03-08T23:27:08.580Z  INFO 2346 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-08T23:27:08.636Z  INFO 2346 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 JPA repository interfaces.
+2024-03-08T23:27:10.303Z  INFO 2346 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-08T23:27:10.367Z  INFO 2346 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-08T23:27:10.368Z  INFO 2346 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-03-08T23:27:10.671Z  INFO 2346 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-08T23:27:10.673Z  INFO 2346 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3910 ms
+2024-03-08T23:27:11.618Z  INFO 2346 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-08T23:27:12.112Z  INFO 2346 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:fb5db93f-8e33-4e4b-b2df-6f9152d3797f user=SA
+2024-03-08T23:27:12.117Z  INFO 2346 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-08T23:27:12.241Z  INFO 2346 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-08T23:27:12.415Z  INFO 2346 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2024-03-08T23:27:12.417Z  INFO 2346 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-03-08T23:27:12.811Z  INFO 2346 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-03-08T23:27:13.244Z  INFO 2346 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-08T23:27:13.350Z  INFO 2346 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.H2Dialect, version: 2.1.214
+2024-03-08T23:27:13.761Z  INFO 2346 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-03-08T23:27:14.590Z  INFO 2346 --- [           main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.example.CODINAVI.entity.Article (class must be instantiated by Interceptor)
+2024-03-08T23:27:14.959Z  INFO 2346 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-08T23:27:15.055Z  INFO 2346 --- [           main] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
+2024-03-08T23:27:15.059Z  INFO 2346 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-08T23:27:15.178Z  WARN 2346 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-08T23:27:16.186Z  INFO 2346 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-08T23:27:16.242Z  INFO 2346 --- [           main] c.example.CODINAVI.CodinaviApplication   : Started CodinaviApplication in 10.863 seconds (process running for 12.481)
+2024-03-08T23:27:25.181Z  INFO 2346 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-08T23:27:25.182Z  INFO 2346 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-08T23:27:25.183Z  INFO 2346 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-03-08T23:36:51.364Z  INFO 2346 --- [io-8080-exec-10] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xee0x010x000x000xea0x030x030xef0xb30x070xd30xea0x080x930xaa0xd10F0x880xb20x180xe80xca0xf70x89mD0xa9n0xa2h0xff0xe24P0xdf0xf3/0xed ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2024-03-09T11:03:37.895Z  INFO 2346 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-03-09T11:03:37.895Z  INFO 2346 --- [ionShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2024-03-09T11:03:37.913Z  INFO 2346 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-03-09T11:03:37.938Z  INFO 2346 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
