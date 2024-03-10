@@ -7,14 +7,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class CodiController {
-
-    @GetMapping("/clothInfo")
-        @ResponseBody
-        public Codi codiApi(@RequestParam("name") String name) {
-            Codi codi = new Codi();
-            codi.setName(name);
+public class WeatherController {
+    @GetMapping("/clothInfo2")
+    @ResponseBody
+    public Codi codiApi(@RequestParam("name") String name) {
+        Codi codi = new Codi();
+        codi.setName(name);
         return codi;
     }
-
 }
