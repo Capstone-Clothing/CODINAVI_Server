@@ -1,12 +1,10 @@
 package com.example.CODINAVI.controller;
 
 import com.example.CODINAVI.entity.Codi;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping(path = "weather")
 public class WeatherController {
     @GetMapping("/clothInfo2")
     @ResponseBody
