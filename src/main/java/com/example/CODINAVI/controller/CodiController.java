@@ -4,6 +4,7 @@ import com.example.CODINAVI.entity.Codi;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping(value = "/codi")
 public class CodiController {
 
     @GetMapping("/clothInfo")
