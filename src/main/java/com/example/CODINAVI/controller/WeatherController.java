@@ -10,7 +10,7 @@ public class WeatherController {
     @ResponseBody
     public Codi codiApi(@RequestParam("name") String name) {
         Codi codi = new Codi();
-        codi.setName(name);
+        codi.setName(name + "fuckyou");
         return codi;
     }
 }
