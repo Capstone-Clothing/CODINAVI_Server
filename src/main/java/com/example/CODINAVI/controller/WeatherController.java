@@ -4,9 +4,9 @@ import com.example.CODINAVI.entity.Codi;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = {"/weather"})
+@RequestMapping("/weather")
 public class WeatherController {
-    @GetMapping("/clothInfo2")
+    @GetMapping("/clothInfo")
     @ResponseBody
     public Codi codiApi(@RequestParam("name") String name) {
         Codi codi = new Codi();
