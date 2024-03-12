@@ -17,7 +17,7 @@ public class CodiController {
 
         try {
             byte[] decodedImage = Base64.getDecoder().decode(imageData);
-            return "{\"status\": \"success\"}";
+            return "이 이미지는 이렇습니다!!";
         } catch (Exception e) {
             e.printStackTrace();
             return "{\"status\": \"error\", \"message\": \"" + e.getMessage() + "\"}";
