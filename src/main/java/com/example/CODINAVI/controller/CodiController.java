@@ -3,16 +3,25 @@ package com.example.CODINAVI.controller;
 import com.example.CODINAVI.entity.Codi;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.ByteArrayInputStream;
+import java.util.Base64;
+import java.util.Map;
+
 @RestController
 @RequestMapping("/codi")
 public class CodiController {
 
-    @GetMapping("/clothInfo")
-        @ResponseBody
-        public Codi codiApi(@RequestParam("name") String name) {
-            Codi codi = new Codi();
-            codi.setName(name);
-        return codi;
+    @PostMapping("/clothInfo")
+    public String handleImageUpload(@RequestBody Map<String, String> request) {
+        String imageData = request.get("image");
+
+        try {
+            byte[] decodedImage = Base64.getDecoder().decode(imageData);
+            return "{\"status\": \"success\"}";
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "{\"status\": \"error\", \"message\": \"" + e.getMessage() + "\"}";
+        }
     }
 
 }
