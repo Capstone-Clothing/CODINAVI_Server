@@ -12,12 +12,14 @@ import java.util.Map;
 public class CodiController {
 
     @PostMapping("/clothInfo")
+    @ResponseBody
     public String handleImageUpload(@RequestBody Map<String, String> request) {
         String imageData = request.get("image");
 
         try {
             byte[] decodedImage = Base64.getDecoder().decode(imageData);
-            return "이 이미지는 이렇습니다!!";
+            ByteArrayInputStream inputStream = new ByteArrayInputStream(decodedImage);
+            return "data:image/jpeg;base64," + imageData;
         } catch (Exception e) {
             e.printStackTrace();
             return "{\"status\": \"error\", \"message\": \"" + e.getMessage() + "\"}";
