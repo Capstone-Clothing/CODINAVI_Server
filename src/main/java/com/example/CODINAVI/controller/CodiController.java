@@ -11,7 +11,7 @@ import java.util.Map;
 @RequestMapping("/codi")
 public class CodiController {
 
-    @PostMapping("/clothInfo")
+    @GetMapping("/clothInfo")
     @ResponseBody
     public String handleImageUpload(@RequestBody Map<String, String> request) {
         String imageData = request.get("image");
