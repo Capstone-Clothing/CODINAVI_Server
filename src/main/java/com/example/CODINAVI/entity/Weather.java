@@ -37,7 +37,6 @@ public class Weather {
         else {
             tempInfo = "상의는 패딩, 두꺼운 코트, 누빔 옷, 기모가 들어간 소재, 그리고 목도리를 걸치시는 것을 추천드립니다.";
         }
-
         return tempInfo;
     }
 }

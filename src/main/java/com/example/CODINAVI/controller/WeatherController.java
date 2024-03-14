@@ -10,7 +10,6 @@ public class WeatherController {
     @GetMapping("/clothInfo")
     @ResponseBody
     public Weather weatherApi(@RequestParam("temp") Double temp) {
-        String tempInfo;
         Weather weather = new Weather();
         weather.setTemp(temp);
         weather.getClothInfo();
