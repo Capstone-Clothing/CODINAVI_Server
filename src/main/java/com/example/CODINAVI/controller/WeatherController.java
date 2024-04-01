@@ -12,8 +12,9 @@ public class WeatherController {
     public Weather weatherApi(@RequestParam("temp") Double temp) {
         Weather weather = new Weather();
         weather.setTemp(temp);
-        weather.idk();
         weather.getClothInfo();
+        weather.getAsdf();
         return weather;
     }
 }
+
