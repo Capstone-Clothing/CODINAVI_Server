@@ -1,8 +1,6 @@
 package com.example.CODINAVI.controller;
 
-import com.example.CODINAVI.entity.Codi;
 import org.springframework.web.bind.annotation.*;
-
 import java.io.ByteArrayInputStream;
 import java.util.Base64;
 import java.util.Map;

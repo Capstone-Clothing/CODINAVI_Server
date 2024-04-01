@@ -10,7 +10,7 @@ public class Weather {
     public Double getTemp() {
         return temp;
     }
-
+    public String idk(){return "hihihihi";}
     public String getClothInfo() {
 
         if (temp >= 28) {
