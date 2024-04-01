@@ -3,6 +3,7 @@ package com.example.CODINAVI.entity;
 public class Weather {
     private Double temp;
     private String tempInfo;
+    private String test;
 
     public void setTemp(Double temp) {
         this.temp = temp;
