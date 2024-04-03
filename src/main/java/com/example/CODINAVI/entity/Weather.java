@@ -4,6 +4,7 @@ public class Weather {
     private Double temp;
     private String tempInfo;
     private String asdf;
+    public String qwer = "qwqerqwer";
 
     public void setTemp(Double temp) {
         this.temp = temp;
