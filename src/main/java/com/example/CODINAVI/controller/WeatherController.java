@@ -14,7 +14,6 @@ public class WeatherController {
         weather.setTemp(temp);
         weather.getClothInfo();
         weather.getAsdf();
-        // 임경빈 병신
         return weather;
     }
 }
