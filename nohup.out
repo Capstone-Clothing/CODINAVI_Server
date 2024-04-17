@@ -26,7 +26,7 @@
 2024-03-08T23:16:14.054Z  INFO 2784 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
 2024-03-08T23:16:14.163Z  INFO 2784 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.H2Dialect, version: 2.1.214
 2024-03-08T23:16:14.544Z  INFO 2784 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2024-03-08T23:16:15.344Z  INFO 2784 --- [           main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.example.CODINAVI.entity.Article (class must be instantiated by Interceptor)
+2024-03-08T23:16:15.344Z  INFO 2784 --- [           main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.example.CODINAVI.dto.Article (class must be instantiated by Interceptor)
 2024-03-08T23:16:15.706Z  INFO 2784 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2024-03-08T23:16:15.785Z  INFO 2784 --- [           main] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
 2024-03-08T23:16:15.788Z  INFO 2784 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
@@ -68,7 +68,7 @@
 2024-03-08T23:27:13.244Z  INFO 2346 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
 2024-03-08T23:27:13.350Z  INFO 2346 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.H2Dialect, version: 2.1.214
 2024-03-08T23:27:13.761Z  INFO 2346 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
-2024-03-08T23:27:14.590Z  INFO 2346 --- [           main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.example.CODINAVI.entity.Article (class must be instantiated by Interceptor)
+2024-03-08T23:27:14.590Z  INFO 2346 --- [           main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.example.CODINAVI.dto.Article (class must be instantiated by Interceptor)
 2024-03-08T23:27:14.959Z  INFO 2346 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2024-03-08T23:27:15.055Z  INFO 2346 --- [           main] o.h.t.s.i.e.GenerationTargetToDatabase   : HHH000476: Executing script '[injected ScriptSourceInputNonExistentImpl script]'
 2024-03-08T23:27:15.059Z  INFO 2346 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'

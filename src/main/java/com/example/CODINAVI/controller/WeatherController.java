@@ -1,7 +1,6 @@
 package com.example.CODINAVI.controller;
 
-import com.example.CODINAVI.entity.Codi;
-import com.example.CODINAVI.entity.Weather;
+import com.example.CODINAVI.dto.WeatherDto;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -9,12 +8,11 @@ import org.springframework.web.bind.annotation.*;
 public class WeatherController {
     @GetMapping("/clothInfo")
     @ResponseBody
-    public Weather weatherApi(@RequestParam("temp") Double temp) {
-        Weather weather = new Weather();
-        weather.setTemp(temp);
-        weather.getClothInfo();
-        weather.getAsdf();
-        return weather;
+    public WeatherDto weatherApi(@RequestParam("temp") Double temp) {
+        WeatherDto weatherDto = new WeatherDto();
+        weatherDto.setTemp(temp);
+        weatherDto.getClothInfo();
+        return weatherDto;
     }
 }
 

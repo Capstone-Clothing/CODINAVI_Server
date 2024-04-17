@@ -1,6 +1,6 @@
-package com.example.CODINAVI.entity;
+package com.example.CODINAVI.dto;
 
-public class Codi {
+public class CodiDto {
     private String name;
 
     public String getName() {
