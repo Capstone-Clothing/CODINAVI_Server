@@ -1,6 +1,6 @@
-package com.example.CODINAVI.dto;
+package com.example.CODINAVI.dto.request;
 
-public class CodiDto {
+public class Codi {
     private String name;
 
     public String getName() {
