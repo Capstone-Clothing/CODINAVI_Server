@@ -41,7 +41,5 @@ public class WeatherController {
 
         return response;
     }
-    //test6
-    //asdfasdf
 }
 
