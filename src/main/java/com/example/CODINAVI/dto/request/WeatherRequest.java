@@ -1,7 +1,7 @@
 package com.example.CODINAVI.dto.request;
 
 public class WeatherRequest {
-    private Double temp;
+    private final Double temp;
 
     public WeatherRequest(Double temp) {
         this.temp = temp;
