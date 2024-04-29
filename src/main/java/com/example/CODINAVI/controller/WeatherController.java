@@ -17,9 +17,7 @@ public class WeatherController {
 
     @GetMapping("/weather/clothInfo")
     public WeatherResponse weatherApi(WeatherRequest request) {
-
         return weatherService.getRecInfo(request);
-
     }
 }
 
