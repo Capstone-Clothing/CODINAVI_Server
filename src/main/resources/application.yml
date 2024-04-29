@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: "jdbc:mysql://localhost/codinavi"
+    url: "jdbc:mysql://3.34.34.170/codinavi"
     username: "root"
     password: "entmdtkdnsk1679!"
     driver-class-name: com.mysql.cj.jdbc.Driver
