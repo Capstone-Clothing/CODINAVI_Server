@@ -29,4 +29,6 @@ public class ColorRecController {
     public void insert(@RequestBody ColorCreateRequest request) {
         colorRecService.insertColor(request);
     }
+
+    //connection test
 }
