@@ -9,10 +9,10 @@ public class Color {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 30)
+    @Column(nullable = false, length = 30, name = "color")
     private String color;
 
-    @Column(nullable = false, length = 30)
+    @Column(nullable = false, length = 30, name = "match_color")
     private String matchColor;
 
     public Color() {
