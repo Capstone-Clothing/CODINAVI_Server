@@ -22,7 +22,7 @@ public class ColorRecService {
     }
 
     public void insertColor(ColorCreateRequest request) {
-        Color color = new Color(request.getColor(), request.getMatchColor());
+        Color color = new Color(request.getColor(), request.getRgb(), request.getPantoneRgb(), request.getHsv(), request.getTcx(), request.getColorForApp(), request.getMatchColor());
         colorRecRepository.save(color);
     }
 }
