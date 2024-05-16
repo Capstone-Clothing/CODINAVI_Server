@@ -1,4 +1,4 @@
-package com.example.CODINAVI.service;
+package com.example.CODINAVI.service.weather;
 
 import com.example.CODINAVI.dto.request.WeatherRequest;
 import com.example.CODINAVI.dto.response.WeatherResponse;

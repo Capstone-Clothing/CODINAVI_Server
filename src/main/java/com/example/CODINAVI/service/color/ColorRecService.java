@@ -1,4 +1,4 @@
-package com.example.CODINAVI.service;
+package com.example.CODINAVI.service.color;
 
 import com.example.CODINAVI.dto.request.ColorCreateRequest;
 import com.example.CODINAVI.dto.request.ColorRecRequest;
