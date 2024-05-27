@@ -9,6 +9,7 @@ public class WeatherResponse {
 
     private String recInfo;
     private String weather;
+    private String temp;
 
     public WeatherResponse() {
     }

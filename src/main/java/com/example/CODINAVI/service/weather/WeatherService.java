@@ -8,6 +8,8 @@ import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
@@ -57,8 +59,12 @@ public class WeatherService {
         }
         log.info(weather.toString());
 
+        Double kelvin = Double.parseDouble(jsonObject.getJSONArray("list").getJSONObject(0).getJSONObject("main").getString("temp"));
+        String celsius = changeKelvinToCelsius(kelvin);
+
         WeatherResponse weatherResponse = new WeatherResponse();
         weatherResponse.setWeather(weather.get(request.getTime()));
+        weatherResponse.setTemp(celsius);
 
         return weatherResponse;
 
@@ -89,6 +95,13 @@ public class WeatherService {
         response.setRecInfo(recInfo);
 
         return response;
+    }
+
+    public String changeKelvinToCelsius(Double temp) {
+        Double changedTemp = (temp - 273.15);
+        DecimalFormat df = new DecimalFormat("#.#");
+        df.setRoundingMode(RoundingMode.DOWN);
+        return df.format(changedTemp);
     }
 
 }
