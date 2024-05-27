@@ -15,6 +15,10 @@ public class WeatherController {
         this.weatherService = weatherService;
     }
 
+    @GetMapping("/weather")
+    public WeatherResponse getWeather(WeatherRequest request) {
+        return weatherService.getWeatherInfo(request);
+    }
     @GetMapping("/weather/clothInfo")
     public WeatherResponse weatherApi(WeatherRequest request) {
         return weatherService.getRecInfo(request);

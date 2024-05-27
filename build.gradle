@@ -25,11 +25,12 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
-	implementation group: 'org.tensorflow', name: 'tensorflow-core-api', version: '0.2.0'
-	implementation group: 'org.tensorflow', name: 'tensorflow-core-platform', version: '0.2.0'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+	implementation group: 'org.json', name: 'json', version: '20231013'
+
 }
 
 tasks.named('test') {

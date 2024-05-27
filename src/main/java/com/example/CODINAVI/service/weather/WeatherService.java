@@ -2,18 +2,67 @@ package com.example.CODINAVI.service.weather;
 
 import com.example.CODINAVI.dto.request.WeatherRequest;
 import com.example.CODINAVI.dto.response.WeatherResponse;
-import com.example.CODINAVI.repository.WeatherRepository;
+import lombok.extern.slf4j.Slf4j;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
+import java.util.Map;
+
+@Slf4j
 @Service
 public class WeatherService {
 
-    private WeatherRepository weatherRepository;
+    private LocalDateTime nowTime = LocalDateTime.now();
+    String formatedNow = nowTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+    String subStringNowDay = formatedNow.substring(0,10);
+    String subStringNowTime = formatedNow.substring(11,13);
 
-    public WeatherService(WeatherRepository weatherRepository) {
-        this.weatherRepository = weatherRepository;
+    public WeatherResponse getWeatherInfo(WeatherRequest request) {
+
+        WebClient webClient =
+                WebClient.builder()
+                        .baseUrl("https://api.openweathermap.org")
+                        .build();
+
+        Map response =
+                webClient.get()
+                         .uri(uriBuilder ->
+                                uriBuilder.path("/data/2.5/forecast")
+                                        .queryParam("lat",request.getLat())
+                                        .queryParam("lon", request.getLon())
+                                        .queryParam("appid","2d360c1fe9d2bade8fc08a1679683e24")
+                                        .build())
+                         .retrieve()
+                         .bodyToMono(Map.class)
+                         .block();
+
+        HashMap<String, String> weather = new HashMap<String, String>();
+
+        JSONObject jsonObject = new JSONObject(response);
+        JSONArray weatherList = jsonObject.getJSONArray("list");
+
+        for (int i = 0; i < weatherList.length(); i++) {
+            String jsonTime = jsonObject.getJSONArray("list").getJSONObject(i).getString("dt_txt");
+            String subStringJsonDay = jsonTime.substring(0, 10);
+            String subStringJsonTime = jsonTime.substring(11, 13);
+
+            if ((subStringJsonDay.equals(subStringNowDay)) && (Integer.parseInt(subStringJsonTime) >= Integer.parseInt(subStringNowTime))) {
+                weather.put(subStringJsonTime + "시", jsonObject.getJSONArray("list").getJSONObject(i).getJSONArray("weather").getJSONObject(0).getString("main"));
+            }
+        }
+        log.info(weather.toString());
+
+        WeatherResponse weatherResponse = new WeatherResponse();
+        weatherResponse.setWeather(weather.get("21시"));
+
+        return weatherResponse;
+
     }
-
     public WeatherResponse getRecInfo(WeatherRequest request) {
 
         String recInfo;
@@ -36,7 +85,8 @@ public class WeatherService {
             recInfo = "상의는 패딩, 두꺼운 코트, 누빔 옷, 기모가 들어간 소재, 그리고 목도리를 걸치시는 것을 추천드립니다.";
         }
 
-        WeatherResponse response = new WeatherResponse(recInfo);
+        WeatherResponse response = new WeatherResponse();
+        response.setRecInfo(recInfo);
 
         return response;
     }
