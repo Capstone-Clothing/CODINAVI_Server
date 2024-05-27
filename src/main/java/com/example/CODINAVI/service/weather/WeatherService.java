@@ -59,12 +59,15 @@ public class WeatherService {
             }
         }
 
+        log.info("checkWeatherList = {}", weather);
+
         Double kelvin = jsonObject.getJSONArray("list").getJSONObject(0).getJSONObject("main").getDouble("temp");
         String celsius = changeKelvinToCelsius(kelvin);
 
         WeatherResponse weatherResponse = new WeatherResponse();
 
         weatherResponse.setWeather(weather.get(request.getTime()));
+        log.info("getWeatherInfo = {}", weatherResponse.getWeather());
         weatherResponse.setTemp(celsius);
 
         return weatherResponse;
