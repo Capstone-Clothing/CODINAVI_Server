@@ -58,7 +58,7 @@ public class WeatherService {
         log.info(weather.toString());
 
         WeatherResponse weatherResponse = new WeatherResponse();
-        weatherResponse.setWeather(weather.get("21시"));
+        weatherResponse.setWeather(weather.get(request.getTime()));
 
         return weatherResponse;
 
