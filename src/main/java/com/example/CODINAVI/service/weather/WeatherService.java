@@ -1,5 +1,6 @@
 package com.example.CODINAVI.service.weather;
 
+import com.example.CODINAVI.dto.request.TempRequest;
 import com.example.CODINAVI.dto.request.WeatherRequest;
 import com.example.CODINAVI.dto.response.WeatherResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -43,7 +44,7 @@ public class WeatherService {
                          .bodyToMono(Map.class)
                          .block();
 
-        HashMap<String, String> weather = new HashMap<String, String>();
+        HashMap<String, String> weather = new HashMap<>();
 
         JSONObject jsonObject = new JSONObject(response);
         JSONArray weatherList = jsonObject.getJSONArray("list");
@@ -57,19 +58,18 @@ public class WeatherService {
                 weather.put(subStringJsonTime + "시", jsonObject.getJSONArray("list").getJSONObject(i).getJSONArray("weather").getJSONObject(0).getString("main"));
             }
         }
-        log.info(weather.toString());
 
         Double kelvin = jsonObject.getJSONArray("list").getJSONObject(0).getJSONObject("main").getDouble("temp");
         String celsius = changeKelvinToCelsius(kelvin);
 
         WeatherResponse weatherResponse = new WeatherResponse();
+
         weatherResponse.setWeather(weather.get(request.getTime()));
         weatherResponse.setTemp(celsius);
 
         return weatherResponse;
-
     }
-    public WeatherResponse getRecInfo(WeatherRequest request) {
+    public WeatherResponse getRecInfo(TempRequest request) {
 
         String recInfo;
 

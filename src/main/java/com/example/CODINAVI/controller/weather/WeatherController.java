@@ -1,5 +1,6 @@
 package com.example.CODINAVI.controller.weather;
 
+import com.example.CODINAVI.dto.request.TempRequest;
 import com.example.CODINAVI.dto.request.WeatherRequest;
 import com.example.CODINAVI.dto.response.WeatherResponse;
 import com.example.CODINAVI.service.weather.WeatherService;
@@ -20,7 +21,7 @@ public class WeatherController {
         return weatherService.getWeatherInfo(request);
     }
     @GetMapping("/weather/clothInfo")
-    public WeatherResponse weatherApi(WeatherRequest request) {
+    public WeatherResponse weatherApi(TempRequest request) {
         return weatherService.getRecInfo(request);
     }
 }
