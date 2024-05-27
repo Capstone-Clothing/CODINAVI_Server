@@ -66,7 +66,8 @@ public class WeatherService {
 
         WeatherResponse weatherResponse = new WeatherResponse();
 
-        weatherResponse.setWeather(weather.get(request.getTime() + "시"));
+        weatherResponse.setWeather(weather.get(request.getTime()));
+        log.info("getWeatherInfo = {}", request.getTime());
         log.info("getWeatherInfo = {}", weatherResponse.getWeather());
         weatherResponse.setTemp(celsius);
 
