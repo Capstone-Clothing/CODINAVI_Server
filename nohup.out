@@ -713,3 +713,1376 @@ Hibernate:
         color c1_0 
     where
         c1_0.color=?
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2024-04-30T08:47:30.694Z  INFO 5886 --- [           main] c.example.CODINAVI.CodinaviApplication   : Starting CodinaviApplication v0.0.1-SNAPSHOT using Java 17.0.10 with PID 5886 (/home/ec2-user/PracticeSpringBoot/build/libs/CODINAVI-0.0.1-SNAPSHOT.jar started by ec2-user in /home/ec2-user/PracticeSpringBoot)
+2024-04-30T08:47:30.703Z  INFO 5886 --- [           main] c.example.CODINAVI.CodinaviApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-04-30T08:47:32.508Z  INFO 5886 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-30T08:47:32.644Z  INFO 5886 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 1 JPA repository interfaces.
+2024-04-30T08:47:34.141Z  INFO 5886 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-04-30T08:47:34.162Z  INFO 5886 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-30T08:47:34.163Z  INFO 5886 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-04-30T08:47:34.458Z  INFO 5886 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-30T08:47:34.461Z  INFO 5886 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3609 ms
+2024-04-30T08:47:35.263Z  INFO 5886 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-30T08:47:35.380Z  INFO 5886 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2024-04-30T08:47:35.383Z  INFO 5886 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-04-30T08:47:35.702Z  INFO 5886 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-04-30T08:47:36.030Z  INFO 5886 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-30T08:47:36.067Z  INFO 5886 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-30T08:47:36.969Z  INFO 5886 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ae7deac
+2024-04-30T08:47:36.972Z  INFO 5886 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-30T08:47:37.061Z  INFO 5886 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2024-04-30T08:47:37.065Z  WARN 5886 --- [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-04-30T08:47:37.777Z  INFO 5886 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-04-30T08:47:38.894Z  INFO 5886 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-04-30T08:47:38.901Z  INFO 5886 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-30T08:47:39.932Z  WARN 5886 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-30T08:47:40.510Z  WARN 5886 --- [           main] o.s.b.a.m.MustacheAutoConfiguration      : Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2024-04-30T08:47:40.591Z  WARN 5886 --- [           main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-04-30T08:47:40.790Z  INFO 5886 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-30T08:47:40.834Z  INFO 5886 --- [           main] c.example.CODINAVI.CodinaviApplication   : Started CodinaviApplication in 11.393 seconds (process running for 12.692)
+2024-04-30T08:47:58.459Z  INFO 5886 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-30T08:47:58.480Z  INFO 5886 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-30T08:47:58.485Z  INFO 5886 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.match_color 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.match_color 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2024-05-08T06:26:07.886Z  INFO 8674 --- [           main] c.example.CODINAVI.CodinaviApplication   : Starting CodinaviApplication v0.0.1-SNAPSHOT using Java 17.0.10 with PID 8674 (/home/ec2-user/PracticeSpringBoot/build/libs/CODINAVI-0.0.1-SNAPSHOT.jar started by ec2-user in /home/ec2-user/PracticeSpringBoot)
+2024-05-08T06:26:07.889Z  INFO 8674 --- [           main] c.example.CODINAVI.CodinaviApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-05-08T06:26:09.731Z  INFO 8674 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-08T06:26:09.873Z  INFO 8674 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 1 JPA repository interfaces.
+2024-05-08T06:26:11.401Z  INFO 8674 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-08T06:26:11.424Z  INFO 8674 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-08T06:26:11.424Z  INFO 8674 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-05-08T06:26:11.724Z  INFO 8674 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-08T06:26:11.728Z  INFO 8674 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3690 ms
+2024-05-08T06:26:12.587Z  INFO 8674 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-08T06:26:12.699Z  INFO 8674 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2024-05-08T06:26:12.701Z  INFO 8674 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-05-08T06:26:13.020Z  INFO 8674 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-08T06:26:13.344Z  INFO 8674 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-08T06:26:13.380Z  INFO 8674 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-08T06:26:14.254Z  INFO 8674 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ae7deac
+2024-05-08T06:26:14.257Z  INFO 8674 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-08T06:26:14.352Z  INFO 8674 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2024-05-08T06:26:14.354Z  WARN 8674 --- [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-05-08T06:26:15.031Z  INFO 8674 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-08T06:26:16.251Z  INFO 8674 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-08T06:26:16.260Z  INFO 8674 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-08T06:26:17.305Z  WARN 8674 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-08T06:26:17.851Z  WARN 8674 --- [           main] o.s.b.a.m.MustacheAutoConfiguration      : Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2024-05-08T06:26:17.932Z  WARN 8674 --- [           main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-05-08T06:26:18.115Z  INFO 8674 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-08T06:26:18.147Z  INFO 8674 --- [           main] c.example.CODINAVI.CodinaviApplication   : Started CodinaviApplication in 11.569 seconds (process running for 12.798)
+2024-05-08T06:26:25.325Z  INFO 8674 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-08T06:26:25.326Z  INFO 8674 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-08T06:26:25.332Z  INFO 8674 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+2024-05-08T06:26:25.727Z ERROR 8674 --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.example.CODINAVI.domain.entity.Color.getMatchColor()" because "color" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "com.example.CODINAVI.domain.entity.Color.getMatchColor()" because "color" is null
+	at com.example.CODINAVI.service.ColorRecService.getColorRec(ColorRecService.java:21) ~[classes!/:0.0.1-SNAPSHOT]
+	at com.example.CODINAVI.controller.ColorRecController.recommend(ColorRecController.java:25) ~[classes!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+2024-05-08T06:26:53.262Z ERROR 8674 --- [nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.example.CODINAVI.domain.entity.Color.getMatchColor()" because "color" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "com.example.CODINAVI.domain.entity.Color.getMatchColor()" because "color" is null
+	at com.example.CODINAVI.service.ColorRecService.getColorRec(ColorRecService.java:21) ~[classes!/:0.0.1-SNAPSHOT]
+	at com.example.CODINAVI.controller.ColorRecController.recommend(ColorRecController.java:25) ~[classes!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+2024-05-08T06:26:54.043Z ERROR 8674 --- [nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.example.CODINAVI.domain.entity.Color.getMatchColor()" because "color" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "com.example.CODINAVI.domain.entity.Color.getMatchColor()" because "color" is null
+	at com.example.CODINAVI.service.ColorRecService.getColorRec(ColorRecService.java:21) ~[classes!/:0.0.1-SNAPSHOT]
+	at com.example.CODINAVI.controller.ColorRecController.recommend(ColorRecController.java:25) ~[classes!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+2024-05-08T06:26:54.688Z ERROR 8674 --- [nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.example.CODINAVI.domain.entity.Color.getMatchColor()" because "color" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "com.example.CODINAVI.domain.entity.Color.getMatchColor()" because "color" is null
+	at com.example.CODINAVI.service.ColorRecService.getColorRec(ColorRecService.java:21) ~[classes!/:0.0.1-SNAPSHOT]
+	at com.example.CODINAVI.controller.ColorRecController.recommend(ColorRecController.java:25) ~[classes!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+2024-05-08T06:27:26.424Z ERROR 8674 --- [nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.example.CODINAVI.domain.entity.Color.getMatchColor()" because "color" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "com.example.CODINAVI.domain.entity.Color.getMatchColor()" because "color" is null
+	at com.example.CODINAVI.service.ColorRecService.getColorRec(ColorRecService.java:21) ~[classes!/:0.0.1-SNAPSHOT]
+	at com.example.CODINAVI.controller.ColorRecController.recommend(ColorRecController.java:25) ~[classes!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+2024-05-08T06:32:16.632Z ERROR 8674 --- [io-8080-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.example.CODINAVI.domain.entity.Color.getMatchColor()" because "color" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "com.example.CODINAVI.domain.entity.Color.getMatchColor()" because "color" is null
+	at com.example.CODINAVI.service.ColorRecService.getColorRec(ColorRecService.java:21) ~[classes!/:0.0.1-SNAPSHOT]
+	at com.example.CODINAVI.controller.ColorRecController.recommend(ColorRecController.java:25) ~[classes!/:0.0.1-SNAPSHOT]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.9.jar!/:6.0.9]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.9.jar!/:6.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+2024-05-08T08:20:12.633Z  INFO 8674 --- [nio-8080-exec-8] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x000x0e80xb70xf6C0x89V0x9d\?0x000x000x000x000x00...]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2024-05-08T12:47:58.346Z  INFO 18410 --- [           main] c.example.CODINAVI.CodinaviApplication   : Starting CodinaviApplication v0.0.1-SNAPSHOT using Java 17.0.10 with PID 18410 (/home/ec2-user/PracticeSpringBoot/build/libs/CODINAVI-0.0.1-SNAPSHOT.jar started by ec2-user in /home/ec2-user/PracticeSpringBoot)
+2024-05-08T12:47:58.362Z  INFO 18410 --- [           main] c.example.CODINAVI.CodinaviApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-05-08T12:48:00.153Z  INFO 18410 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-08T12:48:00.291Z  INFO 18410 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interfaces.
+2024-05-08T12:48:01.786Z  INFO 18410 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-08T12:48:01.810Z  INFO 18410 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-08T12:48:01.810Z  INFO 18410 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-05-08T12:48:02.107Z  INFO 18410 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-08T12:48:02.111Z  INFO 18410 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3621 ms
+2024-05-08T12:48:02.943Z  INFO 18410 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-08T12:48:03.059Z  INFO 18410 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2024-05-08T12:48:03.062Z  INFO 18410 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-05-08T12:48:03.374Z  INFO 18410 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-08T12:48:03.696Z  INFO 18410 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-08T12:48:03.738Z  INFO 18410 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-08T12:48:04.585Z  INFO 18410 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73017a80
+2024-05-08T12:48:04.587Z  INFO 18410 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-08T12:48:04.765Z  INFO 18410 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2024-05-08T12:48:04.766Z  WARN 18410 --- [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-05-08T12:48:05.440Z  INFO 18410 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-08T12:48:06.635Z  INFO 18410 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-08T12:48:06.648Z  INFO 18410 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-08T12:48:07.689Z  WARN 18410 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-08T12:48:08.306Z  WARN 18410 --- [           main] o.s.b.a.m.MustacheAutoConfiguration      : Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2024-05-08T12:48:08.392Z  WARN 18410 --- [           main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-05-08T12:48:08.596Z  INFO 18410 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-08T12:48:08.628Z  INFO 18410 --- [           main] c.example.CODINAVI.CodinaviApplication   : Started CodinaviApplication in 11.474 seconds (process running for 12.666)
+2024-05-08T12:48:08.885Z  INFO 18410 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-08T12:48:08.885Z  INFO 18410 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-08T12:48:08.886Z  INFO 18410 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2024-05-08T14:06:11.751Z  INFO 20651 --- [           main] c.example.CODINAVI.CodinaviApplication   : Starting CodinaviApplication v0.0.1-SNAPSHOT using Java 17.0.10 with PID 20651 (/home/ec2-user/PracticeSpringBoot/build/libs/CODINAVI-0.0.1-SNAPSHOT.jar started by ec2-user in /home/ec2-user/PracticeSpringBoot)
+2024-05-08T14:06:11.762Z  INFO 20651 --- [           main] c.example.CODINAVI.CodinaviApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-05-08T14:06:13.502Z  INFO 20651 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-08T14:06:13.660Z  INFO 20651 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 1 JPA repository interfaces.
+2024-05-08T14:06:15.119Z  INFO 20651 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-08T14:06:15.146Z  INFO 20651 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-08T14:06:15.146Z  INFO 20651 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-05-08T14:06:15.425Z  INFO 20651 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-08T14:06:15.440Z  INFO 20651 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3528 ms
+2024-05-08T14:06:16.317Z  INFO 20651 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-08T14:06:16.444Z  INFO 20651 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2024-05-08T14:06:16.448Z  INFO 20651 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-05-08T14:06:16.764Z  INFO 20651 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-08T14:06:17.054Z  INFO 20651 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-08T14:06:17.099Z  INFO 20651 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-08T14:06:17.982Z  INFO 20651 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ae7deac
+2024-05-08T14:06:17.984Z  INFO 20651 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-08T14:06:18.082Z  INFO 20651 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2024-05-08T14:06:18.084Z  WARN 20651 --- [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-05-08T14:06:18.779Z  INFO 20651 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-08T14:06:19.891Z  INFO 20651 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-08T14:06:19.894Z  INFO 20651 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-08T14:06:21.008Z  WARN 20651 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-08T14:06:21.561Z  WARN 20651 --- [           main] o.s.b.a.m.MustacheAutoConfiguration      : Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2024-05-08T14:06:21.652Z  WARN 20651 --- [           main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-05-08T14:06:21.820Z  INFO 20651 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-08T14:06:21.871Z  INFO 20651 --- [           main] c.example.CODINAVI.CodinaviApplication   : Started CodinaviApplication in 11.356 seconds (process running for 12.594)
+2024-05-08T14:06:22.497Z  INFO 20651 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-08T14:06:22.510Z  INFO 20651 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-08T14:06:22.524Z  INFO 20651 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2024-05-10T03:59:04.250Z  INFO 2322 --- [           main] c.example.CODINAVI.CodinaviApplication   : Starting CodinaviApplication v0.0.1-SNAPSHOT using Java 17.0.10 with PID 2322 (/home/ec2-user/PracticeSpringBoot/build/libs/CODINAVI-0.0.1-SNAPSHOT.jar started by ec2-user in /home/ec2-user/PracticeSpringBoot)
+2024-05-10T03:59:04.261Z  INFO 2322 --- [           main] c.example.CODINAVI.CodinaviApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-05-10T03:59:06.182Z  INFO 2322 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-10T03:59:06.369Z  INFO 2322 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 165 ms. Found 1 JPA repository interfaces.
+2024-05-10T03:59:08.009Z  INFO 2322 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-10T03:59:08.042Z  INFO 2322 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-10T03:59:08.042Z  INFO 2322 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-05-10T03:59:08.371Z  INFO 2322 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-10T03:59:08.374Z  INFO 2322 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3970 ms
+2024-05-10T03:59:09.373Z  INFO 2322 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-10T03:59:09.539Z  INFO 2322 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2024-05-10T03:59:09.549Z  INFO 2322 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-05-10T03:59:09.909Z  INFO 2322 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-10T03:59:10.290Z  INFO 2322 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-10T03:59:10.331Z  INFO 2322 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-10T03:59:11.326Z  INFO 2322 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ae7deac
+2024-05-10T03:59:11.329Z  INFO 2322 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-10T03:59:11.459Z  INFO 2322 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2024-05-10T03:59:11.461Z  WARN 2322 --- [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-05-10T03:59:12.160Z  INFO 2322 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-10T03:59:13.505Z  INFO 2322 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-10T03:59:13.515Z  INFO 2322 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-10T03:59:14.539Z  WARN 2322 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-10T03:59:15.182Z  WARN 2322 --- [           main] o.s.b.a.m.MustacheAutoConfiguration      : Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2024-05-10T03:59:15.266Z  WARN 2322 --- [           main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-05-10T03:59:15.463Z  INFO 2322 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-10T03:59:15.528Z  INFO 2322 --- [           main] c.example.CODINAVI.CodinaviApplication   : Started CodinaviApplication in 12.614 seconds (process running for 14.307)
+2024-05-10T03:59:24.919Z  INFO 2322 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-10T03:59:24.920Z  INFO 2322 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-10T03:59:24.921Z  INFO 2322 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+2024-05-10T04:57:29.749Z  INFO 2322 --- [nio-8080-exec-5] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xee0x010x000x000xea0x030x030xc10xd10xb7a40x0b0xed0x010xe60xa7Z10x970xadx6X0x000xda0x180x86y0xf5L-:u0xe5C0x970x9b] ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2024-05-13T05:56:34.663Z  INFO 2262 --- [           main] c.example.CODINAVI.CodinaviApplication   : Starting CodinaviApplication v0.0.1-SNAPSHOT using Java 17.0.10 with PID 2262 (/home/ec2-user/PracticeSpringBoot/build/libs/CODINAVI-0.0.1-SNAPSHOT.jar started by ec2-user in /home/ec2-user/PracticeSpringBoot)
+2024-05-13T05:56:34.668Z  INFO 2262 --- [           main] c.example.CODINAVI.CodinaviApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-05-13T05:56:36.571Z  INFO 2262 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-13T05:56:36.729Z  INFO 2262 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134 ms. Found 1 JPA repository interfaces.
+2024-05-13T05:56:38.394Z  INFO 2262 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-13T05:56:38.424Z  INFO 2262 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-13T05:56:38.424Z  INFO 2262 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-05-13T05:56:38.739Z  INFO 2262 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-13T05:56:38.745Z  INFO 2262 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3932 ms
+2024-05-13T05:56:39.720Z  INFO 2262 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-13T05:56:39.876Z  INFO 2262 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2024-05-13T05:56:39.886Z  INFO 2262 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-05-13T05:56:40.264Z  INFO 2262 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-13T05:56:40.630Z  INFO 2262 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-13T05:56:40.671Z  INFO 2262 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-13T05:56:41.750Z  INFO 2262 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ae7deac
+2024-05-13T05:56:41.753Z  INFO 2262 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-13T05:56:41.910Z  INFO 2262 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2024-05-13T05:56:41.912Z  WARN 2262 --- [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-05-13T05:56:42.586Z  INFO 2262 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-13T05:56:43.941Z  INFO 2262 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-13T05:56:43.956Z  INFO 2262 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-13T05:56:45.038Z  WARN 2262 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-13T05:56:45.645Z  WARN 2262 --- [           main] o.s.b.a.m.MustacheAutoConfiguration      : Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2024-05-13T05:56:45.743Z  WARN 2262 --- [           main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-05-13T05:56:45.939Z  INFO 2262 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-13T05:56:45.992Z  INFO 2262 --- [           main] c.example.CODINAVI.CodinaviApplication   : Started CodinaviApplication in 12.634 seconds (process running for 14.317)
+2024-05-13T05:58:26.643Z  INFO 2262 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-13T05:58:26.644Z  INFO 2262 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-13T05:58:26.650Z  INFO 2262 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+2024-05-13T06:58:20.238Z  INFO 2262 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-13T06:58:20.248Z  INFO 2262 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-05-13T06:58:20.269Z  INFO 2262 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2024-05-15T07:44:29.156Z  INFO 2267 --- [           main] c.example.CODINAVI.CodinaviApplication   : Starting CodinaviApplication v0.0.1-SNAPSHOT using Java 17.0.10 with PID 2267 (/home/ec2-user/PracticeSpringBoot/build/libs/CODINAVI-0.0.1-SNAPSHOT.jar started by ec2-user in /home/ec2-user/PracticeSpringBoot)
+2024-05-15T07:44:29.161Z  INFO 2267 --- [           main] c.example.CODINAVI.CodinaviApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-05-15T07:44:31.192Z  INFO 2267 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-15T07:44:31.376Z  INFO 2267 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 163 ms. Found 1 JPA repository interfaces.
+2024-05-15T07:44:33.056Z  INFO 2267 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-15T07:44:33.090Z  INFO 2267 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-15T07:44:33.091Z  INFO 2267 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-05-15T07:44:33.417Z  INFO 2267 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-15T07:44:33.419Z  INFO 2267 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4103 ms
+2024-05-15T07:44:34.390Z  INFO 2267 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-15T07:44:34.574Z  INFO 2267 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2024-05-15T07:44:34.579Z  INFO 2267 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-05-15T07:44:34.977Z  INFO 2267 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-15T07:44:35.328Z  INFO 2267 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-15T07:44:35.373Z  INFO 2267 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-15T07:44:36.398Z  INFO 2267 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ae7deac
+2024-05-15T07:44:36.400Z  INFO 2267 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-15T07:44:36.537Z  INFO 2267 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2024-05-15T07:44:36.543Z  WARN 2267 --- [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-05-15T07:44:37.271Z  INFO 2267 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-15T07:44:38.615Z  INFO 2267 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-15T07:44:38.632Z  INFO 2267 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-15T07:44:39.730Z  WARN 2267 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-15T07:44:40.325Z  WARN 2267 --- [           main] o.s.b.a.m.MustacheAutoConfiguration      : Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2024-05-15T07:44:40.427Z  WARN 2267 --- [           main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-05-15T07:44:40.623Z  INFO 2267 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-15T07:44:40.676Z  INFO 2267 --- [           main] c.example.CODINAVI.CodinaviApplication   : Started CodinaviApplication in 12.882 seconds (process running for 14.618)
+2024-05-15T07:44:42.529Z  INFO 2267 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-15T07:44:42.530Z  INFO 2267 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-15T07:44:42.531Z  INFO 2267 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+2024-05-15T09:14:23.488Z  INFO 2267 --- [nio-8080-exec-3] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x050x010x00...]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+2024-05-15T17:43:05.562Z  INFO 2267 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-15T17:43:05.565Z  INFO 2267 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-05-15T17:43:05.589Z  INFO 2267 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2024-05-16T08:36:58.415Z  INFO 2253 --- [           main] c.example.CODINAVI.CodinaviApplication   : Starting CodinaviApplication v0.0.1-SNAPSHOT using Java 17.0.10 with PID 2253 (/home/ec2-user/PracticeSpringBoot/build/libs/CODINAVI-0.0.1-SNAPSHOT.jar started by ec2-user in /home/ec2-user/PracticeSpringBoot)
+2024-05-16T08:36:58.418Z  INFO 2253 --- [           main] c.example.CODINAVI.CodinaviApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-05-16T08:37:00.364Z  INFO 2253 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-16T08:37:00.542Z  INFO 2253 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 151 ms. Found 1 JPA repository interfaces.
+2024-05-16T08:37:02.187Z  INFO 2253 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-16T08:37:02.222Z  INFO 2253 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-16T08:37:02.222Z  INFO 2253 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-05-16T08:37:02.572Z  INFO 2253 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-16T08:37:02.575Z  INFO 2253 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4004 ms
+2024-05-16T08:37:03.641Z  INFO 2253 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-16T08:37:03.814Z  INFO 2253 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2024-05-16T08:37:03.821Z  INFO 2253 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-05-16T08:37:04.186Z  INFO 2253 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-16T08:37:04.592Z  INFO 2253 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-16T08:37:04.635Z  INFO 2253 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-16T08:37:05.691Z  INFO 2253 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ae7deac
+2024-05-16T08:37:05.693Z  INFO 2253 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-16T08:37:05.837Z  INFO 2253 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2024-05-16T08:37:05.839Z  WARN 2253 --- [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-05-16T08:37:06.542Z  INFO 2253 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-16T08:37:07.816Z  INFO 2253 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-16T08:37:07.819Z  INFO 2253 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-16T08:37:09.083Z  WARN 2253 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-16T08:37:09.680Z  WARN 2253 --- [           main] o.s.b.a.m.MustacheAutoConfiguration      : Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2024-05-16T08:37:09.768Z  WARN 2253 --- [           main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-05-16T08:37:09.974Z  INFO 2253 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-16T08:37:10.030Z  INFO 2253 --- [           main] c.example.CODINAVI.CodinaviApplication   : Started CodinaviApplication in 12.945 seconds (process running for 14.647)
+2024-05-16T08:37:16.025Z  INFO 2253 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-16T08:37:16.026Z  INFO 2253 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-16T08:37:16.030Z  INFO 2253 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2024-05-16T08:46:26.911Z  INFO 2734 --- [           main] c.example.CODINAVI.CodinaviApplication   : Starting CodinaviApplication v0.0.1-SNAPSHOT using Java 17.0.10 with PID 2734 (/home/ec2-user/PracticeSpringBoot/build/libs/CODINAVI-0.0.1-SNAPSHOT.jar started by ec2-user in /home/ec2-user/PracticeSpringBoot)
+2024-05-16T08:46:26.916Z  INFO 2734 --- [           main] c.example.CODINAVI.CodinaviApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-05-16T08:46:28.728Z  INFO 2734 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-16T08:46:28.901Z  INFO 2734 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 1 JPA repository interfaces.
+2024-05-16T08:46:30.450Z  INFO 2734 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-16T08:46:30.482Z  INFO 2734 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-16T08:46:30.482Z  INFO 2734 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-05-16T08:46:30.802Z  INFO 2734 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-16T08:46:30.805Z  INFO 2734 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3753 ms
+2024-05-16T08:46:31.608Z  INFO 2734 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-16T08:46:31.768Z  INFO 2734 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2024-05-16T08:46:31.782Z  INFO 2734 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-05-16T08:46:32.244Z  INFO 2734 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-16T08:46:32.557Z  INFO 2734 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-16T08:46:32.595Z  INFO 2734 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-16T08:46:33.576Z  INFO 2734 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a3e5f23
+2024-05-16T08:46:33.578Z  INFO 2734 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-16T08:46:33.662Z  INFO 2734 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2024-05-16T08:46:33.664Z  WARN 2734 --- [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-05-16T08:46:34.358Z  INFO 2734 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-16T08:46:35.546Z  INFO 2734 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-16T08:46:35.552Z  INFO 2734 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-16T08:46:36.565Z  WARN 2734 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-16T08:46:37.131Z  WARN 2734 --- [           main] o.s.b.a.m.MustacheAutoConfiguration      : Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2024-05-16T08:46:37.214Z  WARN 2734 --- [           main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-05-16T08:46:37.425Z  INFO 2734 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-16T08:46:37.477Z  INFO 2734 --- [           main] c.example.CODINAVI.CodinaviApplication   : Started CodinaviApplication in 11.917 seconds (process running for 13.55)
+2024-05-16T08:46:41.740Z  INFO 2734 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-16T08:46:41.742Z  INFO 2734 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-16T08:46:41.752Z  INFO 2734 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.color,
+        c1_0.color_for_app,
+        c1_0.hsv,
+        c1_0.match_color,
+        c1_0.pantone_rgb,
+        c1_0.rgb,
+        c1_0.tcx 
+    from
+        color c1_0 
+    where
+        c1_0.color=?
+2024-05-16T10:05:13.032Z  INFO 2734 --- [nio-8080-exec-9] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xee0x010x000x000xea0x030x03Pq0xf20x1f0xf70x7fF0x960xf60x09&0xc50x1f0xcc0x060xecP0xdczC0x8e_0xcb0x1a0x8fp:=0xad0x830xb10xd1 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:263) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.8.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
