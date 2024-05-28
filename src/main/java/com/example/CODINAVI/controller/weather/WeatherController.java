@@ -2,7 +2,8 @@ package com.example.CODINAVI.controller.weather;
 
 import com.example.CODINAVI.dto.request.TempRequest;
 import com.example.CODINAVI.dto.request.WeatherRequest;
-import com.example.CODINAVI.dto.response.WeatherResponse;
+import com.example.CODINAVI.dto.response.CodiForWeatherResponse;
+import com.example.CODINAVI.dto.response.WeatherInfoResponse;
 import com.example.CODINAVI.service.weather.WeatherService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,11 +18,11 @@ public class WeatherController {
     }
 
     @GetMapping("/weather")
-    public WeatherResponse getWeather(WeatherRequest request) {
+    public WeatherInfoResponse getWeather(WeatherRequest request) {
         return weatherService.getWeatherInfo(request);
     }
     @GetMapping("/weather/clothInfo")
-    public WeatherResponse weatherApi(TempRequest request) {
+    public CodiForWeatherResponse weatherApi(TempRequest request) {
         return weatherService.getRecInfo(request);
     }
 }

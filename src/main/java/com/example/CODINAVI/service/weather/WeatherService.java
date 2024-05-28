@@ -2,7 +2,8 @@ package com.example.CODINAVI.service.weather;
 
 import com.example.CODINAVI.dto.request.TempRequest;
 import com.example.CODINAVI.dto.request.WeatherRequest;
-import com.example.CODINAVI.dto.response.WeatherResponse;
+import com.example.CODINAVI.dto.response.CodiForWeatherResponse;
+import com.example.CODINAVI.dto.response.WeatherInfoResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -25,14 +26,14 @@ public class WeatherService {
     String subStringNowDay = formatedNow.substring(0,10);
     String subStringNowTime = formatedNow.substring(11,13);
 
-    public WeatherResponse getWeatherInfo(WeatherRequest request) {
+    public WeatherInfoResponse getWeatherInfo(WeatherRequest request) {
 
         WebClient webClient =
                 WebClient.builder()
                         .baseUrl("https://api.openweathermap.org")
                         .build();
 
-        Map response =
+        Map<String, Object> response =
                 webClient.get()
                          .uri(uriBuilder ->
                                 uriBuilder.path("/data/2.5/forecast")
@@ -64,16 +65,16 @@ public class WeatherService {
         Double kelvin = jsonObject.getJSONArray("list").getJSONObject(0).getJSONObject("main").getDouble("temp");
         String celsius = changeKelvinToCelsius(kelvin);
 
-        WeatherResponse weatherResponse = new WeatherResponse();
+        WeatherInfoResponse weatherInfoResponse = new WeatherInfoResponse();
 
-        weatherResponse.setWeather(weather.get(request.getTime()));
+        weatherInfoResponse.setWeather(weather.get(request.getTime()));
         log.info("getWeatherInfo = {}", request.getTime());
-        log.info("getWeatherInfo = {}", weatherResponse.getWeather());
-        weatherResponse.setTemp(celsius);
+        log.info("getWeatherInfo = {}", weatherInfoResponse.getWeather());
+        weatherInfoResponse.setTemp(celsius);
 
-        return weatherResponse;
+        return weatherInfoResponse;
     }
-    public WeatherResponse getRecInfo(TempRequest request) {
+    public CodiForWeatherResponse getRecInfo(TempRequest request) {
 
         String recInfo;
 
@@ -95,8 +96,7 @@ public class WeatherService {
             recInfo = "상의는 패딩, 두꺼운 코트, 누빔 옷, 기모가 들어간 소재, 그리고 목도리를 걸치시는 것을 추천드립니다.";
         }
 
-        WeatherResponse response = new WeatherResponse();
-        response.setRecInfo(recInfo);
+        CodiForWeatherResponse response = new CodiForWeatherResponse(recInfo);
 
         return response;
     }

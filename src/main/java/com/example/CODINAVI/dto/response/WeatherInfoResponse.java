@@ -5,12 +5,11 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class WeatherResponse {
+public class WeatherInfoResponse {
 
-    private String recInfo;
     private String weather;
     private String temp;
 
-    public WeatherResponse() {
+    public WeatherInfoResponse() {
     }
 }
