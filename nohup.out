@@ -2086,3 +2086,51 @@ java.lang.IllegalArgumentException: Invalid character found in method name [0x16
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.8.jar!/:na]
 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
 
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.0)
+
+2024-05-28T10:15:52.681+09:00  INFO 3696 --- [           main] c.example.CODINAVI.CodinaviApplication   : Starting CodinaviApplication v0.0.1-SNAPSHOT using Java 17.0.10 with PID 3696 (/home/ec2-user/PracticeSpringBoot/build/libs/CODINAVI-0.0.1-SNAPSHOT.jar started by ec2-user in /home/ec2-user/PracticeSpringBoot)
+2024-05-28T10:15:52.694+09:00  INFO 3696 --- [           main] c.example.CODINAVI.CodinaviApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-05-28T10:15:54.499+09:00  INFO 3696 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-28T10:15:54.882+09:00  INFO 3696 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 360 ms. Found 1 JPA repository interfaces.
+2024-05-28T10:15:56.382+09:00  INFO 3696 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-28T10:15:56.407+09:00  INFO 3696 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-28T10:15:56.407+09:00  INFO 3696 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-05-28T10:15:56.695+09:00  INFO 3696 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-28T10:15:56.697+09:00  INFO 3696 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3871 ms
+2024-05-28T10:15:57.481+09:00  INFO 3696 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-28T10:15:57.591+09:00  INFO 3696 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2024-05-28T10:15:57.602+09:00  INFO 3696 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-05-28T10:15:57.922+09:00  INFO 3696 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-28T10:15:58.224+09:00  INFO 3696 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-28T10:15:58.338+09:00  INFO 3696 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-28T10:15:59.155+09:00  INFO 3696 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7918c7f8
+2024-05-28T10:15:59.157+09:00  INFO 3696 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-28T10:15:59.235+09:00  INFO 3696 --- [           main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2024-05-28T10:15:59.239+09:00  WARN 3696 --- [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-05-28T10:15:59.935+09:00  INFO 3696 --- [           main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-05-28T10:16:01.249+09:00  INFO 3696 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-28T10:16:01.259+09:00  INFO 3696 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-28T10:16:02.324+09:00  WARN 3696 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-28T10:16:02.794+09:00  WARN 3696 --- [           main] o.s.b.a.m.MustacheAutoConfiguration      : Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2024-05-28T10:16:02.859+09:00  WARN 3696 --- [           main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-05-28T10:16:03.252+09:00  INFO 3696 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-28T10:16:03.276+09:00  INFO 3696 --- [           main] c.example.CODINAVI.CodinaviApplication   : Started CodinaviApplication in 11.843 seconds (process running for 13.065)
+2024-05-28T10:16:05.785+09:00  INFO 3696 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-28T10:16:05.785+09:00  INFO 3696 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-28T10:16:05.787+09:00  INFO 3696 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-05-28T10:16:07.923+09:00  INFO 3696 --- [nio-8080-exec-1] c.e.C.service.weather.WeatherService     : checkWeatherList = {18시=Clear, 15시=Clear, 12시=Clouds, 21시=Clear}
+2024-05-28T10:16:07.924+09:00  INFO 3696 --- [nio-8080-exec-1] c.e.C.service.weather.WeatherService     : getWeatherInfo = 12시
+2024-05-28T10:16:07.924+09:00  INFO 3696 --- [nio-8080-exec-1] c.e.C.service.weather.WeatherService     : getWeatherInfo = Clouds
+2024-05-28T10:33:48.412+09:00  INFO 3696 --- [nio-8080-exec-6] c.e.C.service.weather.WeatherService     : checkWeatherList = {18시=Clear, 15시=Clear, 12시=Clouds, 21시=Clear}
+2024-05-28T10:33:48.412+09:00  INFO 3696 --- [nio-8080-exec-6] c.e.C.service.weather.WeatherService     : getWeatherInfo = 03시
+2024-05-28T10:33:48.413+09:00  INFO 3696 --- [nio-8080-exec-6] c.e.C.service.weather.WeatherService     : getWeatherInfo = null
+2024-05-28T10:33:54.440+09:00  INFO 3696 --- [nio-8080-exec-8] c.e.C.service.weather.WeatherService     : checkWeatherList = {18시=Clear, 15시=Clear, 12시=Clouds, 21시=Clear}
+2024-05-28T10:33:54.440+09:00  INFO 3696 --- [nio-8080-exec-8] c.e.C.service.weather.WeatherService     : getWeatherInfo = 12시
+2024-05-28T10:33:54.441+09:00  INFO 3696 --- [nio-8080-exec-8] c.e.C.service.weather.WeatherService     : getWeatherInfo = Clouds
