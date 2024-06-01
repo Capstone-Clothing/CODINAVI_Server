@@ -26,11 +26,16 @@ public class WeatherService {
     String formatedNow = nowTime.format(DateTimeFormatter.ofPattern("yyyyMMdd HH:mm:ss"));
     String subStringNowDay = formatedNow.substring(0, 8);
     String subStringNowTime = formatedNow.substring(9, 11);
+    String base_time = timeChange(subStringNowTime);
+    String base_date = subStringNowDay;
 
     public WeatherInfoResponse getWeatherInfo(WeatherRequest request) {
 
-        String base_date = subStringNowDay;
-        String base_time = timeChange(subStringNowTime);
+        if (base_time.equals("2300")) {
+            base_date = String.valueOf(Integer.parseInt(subStringNowDay) - 1);
+        } else {
+            base_date = subStringNowDay;
+        }
 
         DefaultUriBuilderFactory factory = new DefaultUriBuilderFactory(BASE_URL);
         factory.setEncodingMode(DefaultUriBuilderFactory.EncodingMode.VALUES_ONLY);
@@ -48,7 +53,7 @@ public class WeatherService {
                                 uriBuilder.path("/1360000/VilageFcstInfoService_2.0/getVilageFcst")
                                         .queryParam("serviceKey", "cQvLnSjhJGqaRDQw3oWGS3PLYZ%2F0mK2hywjRA07%2F1Gc455UdpgXjjyTwTQJxQcI52xi6nl%2By9XgDlhQEF5o9Uw%3D%3D")
                                         .queryParam("pageNo", 1)
-                                        .queryParam("numOfRows", 500)
+                                        .queryParam("numOfRows", 507)
                                         .queryParam("dataType", "JSON")
                                         .queryParam("base_date", base_date)
                                         .queryParam("base_time", base_time)
@@ -60,6 +65,7 @@ public class WeatherService {
                         .block();
 
         JSONObject jsonObject = new JSONObject(response);
+        log.info(jsonObject.toString());
         JSONObject response1 = jsonObject.getJSONObject("response").getJSONObject("body");
         JSONObject items = response1.getJSONObject("items");
         JSONArray itemList = items.getJSONArray("item");
@@ -67,7 +73,9 @@ public class WeatherService {
         List<String> tempList = new ArrayList<>();
         List<String> weatherList = new ArrayList<>();
         List<String> timeList = new ArrayList<>();
-        List<String> dayList = new ArrayList<>();
+        List<String> dateList = new ArrayList<>();
+        List<String> humidityList = new ArrayList<>();
+        List<String> precipitationList = new ArrayList<>();
 
         for (int i = 0; i < itemList.length(); i++) {
 
@@ -92,25 +100,33 @@ public class WeatherService {
             }
 
             if (category.equals("TMP")) {
-                dayList.add(fcstDate);
+                dateList.add(fcstDate);
                 timeList.add(fcstTime);
                 tempList.add(fcstValue);
             }
 
+            if (category.equals("REH")) {
+                humidityList.add(fcstValue);
+            }
+
+            if (category.equals("PCP")) {
+                precipitationList.add(fcstValue);
+            }
+
         }
 
-        List<InfoFromDateResponse> everyInfoResponse = new ArrayList<>();
-        List<InfoFromTimeResponse> everyTimeResponse = new ArrayList<>();
-        List<InfoFromDateResponse> test = new ArrayList<>();
+        List<InfoFromDateResponse> infoFromDateResponse = new ArrayList<>();
+        List<InfoFromTimeResponse> infoFromTimeResponse = new ArrayList<>();
 
         for (int i = 0; i < weatherList.size(); i++) {
-
-//            everyInfoResponse.add(new InfoFromDateResponse(dayList.get(i), new InfoFromTimeResponse(timeList.get(i), weatherList.get(i), tempList.get(i))));
-            everyInfoResponse.add(new InfoFromDateResponse(dayList.get(i), new InfoFromTimeResponse(timeList.get(i), weatherList.get(i), tempList.get(i))));
+            infoFromTimeResponse.add(new InfoFromTimeResponse(timeList.get(i), weatherList.get(i), tempList.get(i), humidityList.get(i), precipitationList.get(i)));
         }
-//        everyInfoResponse.add();
 
-        WeatherInfoResponse weatherInfoResponse = new WeatherInfoResponse(everyInfoResponse);
+        for (int i= 0; i < dateList.size(); i++) {
+            infoFromDateResponse.add(new InfoFromDateResponse(dateList.get(i), infoFromTimeResponse.get(i)));
+        }
+
+        WeatherInfoResponse weatherInfoResponse = new WeatherInfoResponse(infoFromDateResponse);
 
         return weatherInfoResponse;
     }
