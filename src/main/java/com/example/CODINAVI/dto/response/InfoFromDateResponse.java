@@ -8,9 +8,9 @@ import java.util.List;
 public class InfoFromDateResponse {
 
     private String date;
-    private InfoFromTimeResponse info;
+    private List<InfoFromTimeResponse> info;
 
-    public InfoFromDateResponse(String date, InfoFromTimeResponse info) {
+    public InfoFromDateResponse(String date, List<InfoFromTimeResponse> info) {
         this.date = date;
         this.info = info;
     }

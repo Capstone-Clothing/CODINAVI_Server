@@ -115,18 +115,22 @@ public class WeatherService {
 
         }
 
-        List<InfoFromDateResponse> infoFromDateResponse = new ArrayList<>();
-        List<InfoFromTimeResponse> infoFromTimeResponse = new ArrayList<>();
+        List<InfoFromDateResponse> infoFromDateResponses = new ArrayList<>();
+        List<InfoFromTimeResponse> infoFromTimeResponses = new ArrayList<>();
 
         for (int i = 0; i < weatherList.size(); i++) {
-            infoFromTimeResponse.add(new InfoFromTimeResponse(timeList.get(i), weatherList.get(i), tempList.get(i), humidityList.get(i), precipitationList.get(i)));
+            infoFromTimeResponses.add(new InfoFromTimeResponse(timeList.get(i), weatherList.get(i), tempList.get(i), humidityList.get(i), precipitationList.get(i)));
         }
 
-        for (int i= 0; i < dateList.size(); i++) {
-            infoFromDateResponse.add(new InfoFromDateResponse(dateList.get(i), infoFromTimeResponse.get(i)));
+        infoFromDateResponses.add(new InfoFromDateResponse(base_date, infoFromTimeResponses));
+
+        for (InfoFromDateResponse infoFromDateResponse : infoFromDateResponses) {
+            if (infoFromDateResponse.getDate().equals(subStringNowDay)) {
+                infoFromTimeResponses.add(infoFromDateResponse.getDate(), infoFromTimeResponses.get());
+            }
         }
 
-        WeatherInfoResponse weatherInfoResponse = new WeatherInfoResponse(infoFromDateResponse);
+        WeatherInfoResponse weatherInfoResponse = new WeatherInfoResponse(infoFromDateResponses);
 
         return weatherInfoResponse;
     }
