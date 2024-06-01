@@ -29,6 +29,9 @@ public class WeatherService {
     String base_time = timeChange(subStringNowTime);
     String base_date = subStringNowDay;
 
+    List<String> dateList = new ArrayList<>();
+
+
     public WeatherInfoResponse getWeatherInfo(WeatherRequest request) {
 
         if (base_time.equals("2300")) {
@@ -73,7 +76,6 @@ public class WeatherService {
         List<String> tempList = new ArrayList<>();
         List<String> weatherList = new ArrayList<>();
         List<String> timeList = new ArrayList<>();
-        List<String> dateList = new ArrayList<>();
         List<String> humidityList = new ArrayList<>();
         List<String> precipitationList = new ArrayList<>();
 
@@ -117,16 +119,21 @@ public class WeatherService {
 
         List<InfoFromDateResponse> infoFromDateResponses = new ArrayList<>();
         List<InfoFromTimeResponse> infoFromTimeResponses = new ArrayList<>();
+        InfoFromTimeResponse infoFromTimeResponses1;
 
         for (int i = 0; i < weatherList.size(); i++) {
             infoFromTimeResponses.add(new InfoFromTimeResponse(timeList.get(i), weatherList.get(i), tempList.get(i), humidityList.get(i), precipitationList.get(i)));
         }
 
-        infoFromDateResponses.add(new InfoFromDateResponse(base_date, infoFromTimeResponses));
+//        for (int i= 0; i < dateList.size(); i++) {
+//            infoFromDateResponses.add(new InfoFromDateResponse(dateList.get(i), infoFromTimeResponses));
+//        }
+
+        infoFromDateResponses.add(new InfoFromDateResponse(dateList.get(0), infoFromTimeResponses));
 
         for (InfoFromDateResponse infoFromDateResponse : infoFromDateResponses) {
             if (infoFromDateResponse.getDate().equals(subStringNowDay)) {
-                infoFromTimeResponses.add(infoFromDateResponse.getDate(), infoFromTimeResponses.get());
+                infoFromTimeResponses1 = ;
             }
         }
 

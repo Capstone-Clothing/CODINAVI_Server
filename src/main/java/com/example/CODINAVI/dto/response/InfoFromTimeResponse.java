@@ -13,6 +13,8 @@ public class InfoFromTimeResponse {
     private String hum;
     private String precipitation;
 
+    public InfoFromTimeResponse() {
+    }
 
     public InfoFromTimeResponse(String time, String weather, String temp, String hum, String precipitation) {
         this.time = time;
