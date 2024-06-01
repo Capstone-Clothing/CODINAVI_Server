@@ -7,12 +7,10 @@ public class WeatherRequest {
 
     private final Double lat;
     private final Double lon;
-    private final String time;
 
-    public WeatherRequest(Double lat, Double lon, String time) {
+    public WeatherRequest(Double lat, Double lon) {
         this.lat = lat;
         this.lon = lon;
-        this.time = time;
     }
 
 }

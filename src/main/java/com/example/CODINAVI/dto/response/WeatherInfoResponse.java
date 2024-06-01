@@ -3,13 +3,15 @@ package com.example.CODINAVI.dto.response;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 public class WeatherInfoResponse {
 
-    private String weather;
-    private String temp;
+    private List<InfoFromDateResponse> infoFromDateList;
 
-    public WeatherInfoResponse() {
+    public WeatherInfoResponse(List<InfoFromDateResponse> infoFromDateList) {
+        this.infoFromDateList = infoFromDateList;
     }
 }
