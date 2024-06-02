@@ -76,6 +76,7 @@ public class WeatherService {
         List<String> dateList = new ArrayList<>();
         List<String> humidityList = new ArrayList<>();
         List<String> precipitationList = new ArrayList<>();
+        List<String> precipitationProbabilityList = new ArrayList<>();
 
         for (int i = 0; i < itemList.length(); i++) {
 
@@ -113,13 +114,17 @@ public class WeatherService {
                 precipitationList.add(fcstValue);
             }
 
+            if (category.equals("POP")) {
+                precipitationProbabilityList.add(fcstValue);
+            }
+
         }
 
         List<InfoFromDateResponse> infoFromDateResponses = new ArrayList<>();
         List<InfoFromTimeResponse> infoFromTimeResponses = new ArrayList<>();
 
         for (int i = 0; i < weatherList.size(); i++) {
-            infoFromTimeResponses.add(new InfoFromTimeResponse(timeList.get(i), weatherList.get(i), tempList.get(i), humidityList.get(i), precipitationList.get(i)));
+            infoFromTimeResponses.add(new InfoFromTimeResponse(timeList.get(i), weatherList.get(i), tempList.get(i), humidityList.get(i), precipitationList.get(i), precipitationProbabilityList.get(i)));
         }
 
         for (int i= 0; i < dateList.size(); i++) {
