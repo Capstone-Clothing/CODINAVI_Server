@@ -125,10 +125,13 @@ public class WeatherService {
             infoFromTimeResponses.add(new InfoFromTimeResponse(timeList.get(i), weatherList.get(i), tempList.get(i), humidityList.get(i), precipitationList.get(i)));
         }
 
-//        for (int i= 0; i < dateList.size(); i++) {
-//            infoFromDateResponses.add(new InfoFromDateResponse(dateList.get(i), infoFromTimeResponses));
-//        }
-
+        List<String> list = new ArrayList<>();
+        for (int i = 0; i < dateList.size(); i++) {
+            if (!list.contains(dateList.get(i))) {
+                list.add(dateList.get(i));
+            }
+        }
+        log.info("list = {}", list);
         infoFromDateResponses.add(new InfoFromDateResponse(dateList.get(0), infoFromTimeResponses));
 
         for (InfoFromDateResponse infoFromDateResponse : infoFromDateResponses) {
