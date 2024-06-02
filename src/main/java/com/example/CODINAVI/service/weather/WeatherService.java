@@ -75,6 +75,7 @@ public class WeatherService {
         List<String> timeList = new ArrayList<>();
         List<String> dateList = new ArrayList<>();
         List<String> humidityList = new ArrayList<>();
+        List<String> precipitationTypeList = new ArrayList<>();
         List<String> precipitationList = new ArrayList<>();
         List<String> precipitationProbabilityList = new ArrayList<>();
 
@@ -118,13 +119,27 @@ public class WeatherService {
                 precipitationProbabilityList.add(fcstValue);
             }
 
+            if (category.equals("PTY")) {
+                if (fcstValue.equals("0")) {
+                    precipitationTypeList.add("없음");
+                } else if (fcstValue.equals("1")) {
+                    precipitationTypeList.add("비");
+                } else if (fcstValue.equals("2")) {
+                    precipitationTypeList.add("비 또는 눈");
+                } else if (fcstValue.equals("3")) {
+                    precipitationTypeList.add("눈");
+                } else {
+                    precipitationTypeList.add("소나기");
+                }
+            }
+
         }
 
         List<InfoFromDateResponse> infoFromDateResponses = new ArrayList<>();
         List<InfoFromTimeResponse> infoFromTimeResponses = new ArrayList<>();
 
         for (int i = 0; i < weatherList.size(); i++) {
-            infoFromTimeResponses.add(new InfoFromTimeResponse(timeList.get(i), weatherList.get(i), tempList.get(i), humidityList.get(i), precipitationList.get(i), precipitationProbabilityList.get(i)));
+            infoFromTimeResponses.add(new InfoFromTimeResponse(timeList.get(i), weatherList.get(i), tempList.get(i), humidityList.get(i), precipitationTypeList.get(i), precipitationList.get(i), precipitationProbabilityList.get(i)));
         }
 
         for (int i= 0; i < dateList.size(); i++) {
