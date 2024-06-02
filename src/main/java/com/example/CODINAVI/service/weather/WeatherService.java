@@ -78,6 +78,7 @@ public class WeatherService {
         List<String> timeList = new ArrayList<>();
         List<String> humidityList = new ArrayList<>();
         List<String> precipitationList = new ArrayList<>();
+        List<String> precipitationProbabilityList = new ArrayList<>();
 
         for (int i = 0; i < itemList.length(); i++) {
 
@@ -113,6 +114,10 @@ public class WeatherService {
 
             if (category.equals("PCP")) {
                 precipitationList.add(fcstValue);
+            }
+
+            if (category.equals("POP")) {
+                precipitationProbabilityList.add(fcstValue);
             }
 
         }
