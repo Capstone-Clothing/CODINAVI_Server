@@ -135,7 +135,7 @@ public class WeatherService {
 
         }
 
-        List<InfoFromDateResponse> infoFromDateResponses = new ArrayList<>();
+        List<InfoFromWeatherResponse> infoFromWeatherRespons = new ArrayList<>();
         List<InfoFromTimeResponse> infoFromTimeResponses = new ArrayList<>();
 
         for (int i = 0; i < weatherList.size(); i++) {
@@ -143,10 +143,10 @@ public class WeatherService {
         }
 
         for (int i= 0; i < dateList.size(); i++) {
-            infoFromDateResponses.add(new InfoFromDateResponse(dateList.get(i), infoFromTimeResponses.get(i)));
+            infoFromWeatherRespons.add(new InfoFromWeatherResponse(dateList.get(i), infoFromTimeResponses.get(i)));
         }
 
-        WeatherInfoResponse weatherInfoResponse = new WeatherInfoResponse(infoFromDateResponses);
+        WeatherInfoResponse weatherInfoResponse = new WeatherInfoResponse(infoFromWeatherRespons);
 
         return weatherInfoResponse;
     }
