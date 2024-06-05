@@ -10,10 +10,10 @@ import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.model.PutObjectRequest;
+import software.amazon.awssdk.core.exception.SdkClientException;
+import software.amazon.awssdk.services.s3.model.S3Exception;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.UUID;
 
 @RestController
@@ -52,7 +52,16 @@ public class ImageUploadController {
             return new ResponseEntity<>("이미지 업로드 성공: " + key, HttpStatus.OK);
         } catch (IOException e) {
             e.printStackTrace();
-            return new ResponseEntity<>("이미지 업로드 실패", HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>("이미지 업로드 실패: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        } catch (SdkClientException e) {
+            e.printStackTrace();
+            return new ResponseEntity<>("AWS S3 클라이언트 오류: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        } catch (S3Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>("AWS S3 서비스 오류: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<>("이미지 업로드 중 오류 발생: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }
