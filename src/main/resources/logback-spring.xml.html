@@ -1,23 +1,26 @@
 <configuration>
-    <property name="LOG_PATH" value="logs" />
-    <property name="LOG_FILE" value="${LOG_PATH}/spring-boot-app.log" />
 
-    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>${LOG_FILE}</file>
-        <append>true</append>
+    <property name="LOG_PATH" value="logs" />
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
 
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <appender name="FILE_IMAGE_UPLOAD" class="ch.qos.logback.core.FileAppender">
+        <file>${LOG_PATH}/image_upload.log</file>
+        <append>true</append>
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
 
     <root level="INFO">
-        <appender-ref ref="FILE" />
-        <appender-ref ref="STDOUT" />
+        <appender-ref ref="CONSOLE" />
     </root>
+
+    <logger name="com.example.CODINAVI.controller.cloth.ImageUploadController" level="DEBUG" additivity="false">
+        <appender-ref ref="FILE_IMAGE_UPLOAD" />
+    </logger>
 </configuration>
