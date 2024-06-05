@@ -1,4 +1,15 @@
 spring:
+  cloud:
+    aws:
+      credentials:
+        accessKey: AKIAQ3EGSV5HO7UDUP6D
+        secretKey: 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
+      s3:
+        bucket: codinavi-image
+      region:
+        static: ap-northeast-2
+      stack:
+        auto: false
   datasource:
     url: "jdbc:mysql://3.34.34.170/codinavi"
     username: "root"
