@@ -10,6 +10,13 @@ spring:
         static: ap-northeast-2
       stack:
         auto: false
+  logging:
+    level:
+      root: INFO
+      org.springframework.web: DEBUG
+      com.example: DEBUG
+    file:
+      name: logs/app.log
   datasource:
     url: "jdbc:mysql://3.34.34.170/codinavi"
     username: "root"
