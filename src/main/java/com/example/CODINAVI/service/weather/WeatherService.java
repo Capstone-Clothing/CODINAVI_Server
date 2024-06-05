@@ -29,6 +29,7 @@ public class WeatherService {
     String base_time = timeChange(subStringNowTime);
     String base_date = subStringNowDay;
 
+
     public WeatherInfoResponse getWeatherInfo(WeatherRequest request) {
 
         if (base_time.equals("2300")) {
