@@ -1,0 +1,68 @@
+2024-06-05T14:43:26.674+09:00  WARN 3050 --- [Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/ec2-user/.gradle/caches/modules-2/files-2.1/org.json/json/20231013/e22e0c040fe16f04ffdb85d851d77b07fc05ea52/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/ec2-user/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-06-05T14:43:26.706+09:00  INFO 3050 --- [Test worker] c.e.CODINAVI.CodinaviApplicationTests    : Starting CodinaviApplicationTests using Java 17.0.10 with PID 3050 (started by ec2-user in /home/ec2-user/PracticeSpringBoot)
+2024-06-05T14:43:26.707+09:00 DEBUG 3050 --- [Test worker] c.e.CODINAVI.CodinaviApplicationTests    : Running with Spring Boot v3.1.0, Spring v6.0.9
+2024-06-05T14:43:26.709+09:00  INFO 3050 --- [Test worker] c.e.CODINAVI.CodinaviApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2024-06-05T14:43:26.798+09:00 DEBUG 3050 --- [Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7573e12f
+2024-06-05T14:43:28.695+09:00  INFO 3050 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-05T14:43:34.821+09:00  INFO 3050 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6101 ms. Found 1 JPA repository interfaces.
+2024-06-05T14:46:39.290+09:00  INFO 3050 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-05T14:46:39.449+09:00  INFO 3050 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2024-06-05T14:46:39.452+09:00  INFO 3050 --- [Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-06-05T14:46:39.777+09:00  INFO 3050 --- [Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-06-05T14:46:40.107+09:00  INFO 3050 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-05T14:46:40.146+09:00  INFO 3050 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-05T14:46:41.297+09:00  INFO 3050 --- [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d512c1
+2024-06-05T14:46:41.304+09:00  INFO 3050 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-05T14:46:41.441+09:00  INFO 3050 --- [Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2024-06-05T14:46:41.444+09:00  WARN 3050 --- [Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-06-05T14:46:42.437+09:00  INFO 3050 --- [Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-06-05T14:47:16.591+09:00  INFO 3050 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-05T14:47:19.670+09:00  INFO 3050 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05T15:07:48.644+09:00  WARN 2413 --- [Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/home/ec2-user/.gradle/caches/modules-2/files-2.1/org.json/json/20231013/e22e0c040fe16f04ffdb85d851d77b07fc05ea52/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/home/ec2-user/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-06-05T15:07:48.685+09:00  INFO 2413 --- [Test worker] c.e.CODINAVI.CodinaviApplicationTests    : Starting CodinaviApplicationTests using Java 17.0.10 with PID 2413 (started by ec2-user in /home/ec2-user/PracticeSpringBoot)
+2024-06-05T15:07:48.687+09:00 DEBUG 2413 --- [Test worker] c.e.CODINAVI.CodinaviApplicationTests    : Running with Spring Boot v3.1.0, Spring v6.0.9
+2024-06-05T15:07:48.691+09:00  INFO 2413 --- [Test worker] c.e.CODINAVI.CodinaviApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2024-06-05T15:07:48.770+09:00 DEBUG 2413 --- [Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2a389173
+2024-06-05T15:07:50.316+09:00  INFO 2413 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-05T15:07:50.662+09:00  INFO 2413 --- [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 325 ms. Found 1 JPA repository interfaces.
+2024-06-05T15:07:51.765+09:00  INFO 2413 --- [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-05T15:07:51.912+09:00  INFO 2413 --- [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2024-06-05T15:07:51.923+09:00  INFO 2413 --- [Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-06-05T15:07:52.263+09:00  INFO 2413 --- [Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-06-05T15:07:52.602+09:00  INFO 2413 --- [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-05T15:07:52.645+09:00  INFO 2413 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-05T15:07:53.755+09:00  INFO 2413 --- [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66863941
+2024-06-05T15:07:53.760+09:00  INFO 2413 --- [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-05T15:07:53.873+09:00  INFO 2413 --- [Test worker] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2024-06-05T15:07:53.879+09:00  WARN 2413 --- [Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-06-05T15:07:54.874+09:00  INFO 2413 --- [Test worker] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-06-05T15:07:56.174+09:00  INFO 2413 --- [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-05T15:07:56.181+09:00  INFO 2413 --- [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05T15:07:58.813+09:00  WARN 2413 --- [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-05T15:07:59.098+09:00 DEBUG 2413 --- [Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-05T15:07:59.304+09:00 DEBUG 2413 --- [Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2024-06-05T15:07:59.358+09:00 DEBUG 2413 --- [Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-06-05T15:07:59.390+09:00 DEBUG 2413 --- [Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-05T15:07:59.427+09:00  WARN 2413 --- [Test worker] o.s.b.a.m.MustacheAutoConfiguration      : Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2024-06-05T15:07:59.504+09:00  WARN 2413 --- [Test worker] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-06-05T15:07:59.878+09:00  INFO 2413 --- [Test worker] c.e.CODINAVI.CodinaviApplicationTests    : Started CodinaviApplicationTests in 12.038 seconds (process running for 14.764)
+2024-06-05T15:08:01.334+09:00 DEBUG 2413 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@2a389173, started on Wed Jun 05 15:07:48 KST 2024
+2024-06-05T15:08:01.384+09:00  INFO 2413 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-05T15:08:01.395+09:00  INFO 2413 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-05T15:08:01.433+09:00  INFO 2413 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
