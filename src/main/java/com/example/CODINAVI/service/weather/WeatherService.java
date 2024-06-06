@@ -68,7 +68,6 @@ public class WeatherService {
                         .block();
 
         JSONObject jsonObject = new JSONObject(response);
-        log.info(jsonObject.toString());
         JSONObject response1 = jsonObject.getJSONObject("response").getJSONObject("body");
         JSONObject items = response1.getJSONObject("items");
         JSONArray itemList = items.getJSONArray("item");
@@ -83,8 +82,6 @@ public class WeatherService {
         List<String> precipitationProbabilityList = new ArrayList<>();
 
         for (int i = 0; i < itemList.length(); i++) {
-
-            log.info("itemList = {}", itemList.getJSONObject(i));
 
             JSONObject item = itemList.getJSONObject(i);
             String fcstValue = item.getString("fcstValue");
