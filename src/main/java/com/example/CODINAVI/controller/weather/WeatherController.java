@@ -25,5 +25,6 @@ public class WeatherController {
     public CodiForWeatherResponse weatherApi(TempRequest request) {
         return weatherService.getRecInfo(request);
     }
+
 }
 

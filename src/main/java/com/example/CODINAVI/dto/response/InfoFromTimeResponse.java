@@ -8,8 +8,6 @@ public class InfoFromTimeResponse {
     private String time;
     private String weather;
     private String temp;
-//    private String tempMin;
-//    private String tempMax;
     private String hum;
     private String precipitationType;
     private String precipitation;

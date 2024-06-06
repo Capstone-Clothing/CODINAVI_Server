@@ -28,8 +28,8 @@ public class WeatherService {
         String formatedNow = nowTime.format(DateTimeFormatter.ofPattern("yyyyMMdd HH:mm:ss"));
         String subStringNowDay = formatedNow.substring(0, 8);
         String subStringNowTime = formatedNow.substring(9, 11);
-        String base_date;
         String base_time = timeChange(subStringNowTime);
+        String base_date;
 
         if (base_time.equals("2300")) {
             base_date = String.valueOf(Integer.parseInt(subStringNowDay) - 1);
@@ -104,7 +104,6 @@ public class WeatherService {
                 tempList.add(fcstValue);
             }
 
-
             if (category.equals("REH")) {
                 humidityList.add(fcstValue);
             }
@@ -130,7 +129,48 @@ public class WeatherService {
                     precipitationTypeList.add("소나기");
                 }
             }
+        }
 
+        String tempMinMaxResponse =
+                webClient.get()
+                        .uri(uriBuilder ->
+                                uriBuilder.path("/1360000/VilageFcstInfoService_2.0/getVilageFcst")
+                                        .queryParam("serviceKey", "cQvLnSjhJGqaRDQw3oWGS3PLYZ%2F0mK2hywjRA07%2F1Gc455UdpgXjjyTwTQJxQcI52xi6nl%2By9XgDlhQEF5o9Uw%3D%3D")
+                                        .queryParam("pageNo", 1)
+                                        .queryParam("numOfRows", 507)
+                                        .queryParam("dataType", "JSON")
+                                        .queryParam("base_date", subStringNowDay)
+                                        .queryParam("base_time", "0200")
+                                        .queryParam("nx", changeLatAndLonToCoordinate(request.getLat(), request.getLon()).getX())
+                                        .queryParam("ny", changeLatAndLonToCoordinate(request.getLat(), request.getLon()).getY())
+                                        .build())
+                        .retrieve()
+                        .bodyToMono(String.class)
+                        .block();
+
+        JSONObject jsonObject2 = new JSONObject(tempMinMaxResponse);
+        JSONObject response2 = jsonObject2.getJSONObject("response").getJSONObject("body");
+        JSONObject items2 = response2.getJSONObject("items");
+        JSONArray itemList2 = items2.getJSONArray("item");
+
+        String lowTemp = "";
+        String highTemp = "";
+
+        log.info("checkItemList2 = {}", itemList2.toString());
+        for (int i = 0; i < itemList2.length(); i++) {
+
+            JSONObject item = itemList2.getJSONObject(i);
+            String fcstValue = item.getString("fcstValue");
+            String category = item.getString("category");
+            String fcstDate = item.getString("fcstDate");
+
+            if (category.equals("TMN") && fcstDate.equals(subStringNowDay)) {
+                lowTemp = fcstValue;
+            }
+
+            if (category.equals("TMX") && fcstDate.equals(subStringNowDay)) {
+                highTemp = fcstValue;
+            }
         }
 
         List<InfoFromWeatherResponse> infoFromWeatherRespons = new ArrayList<>();
@@ -140,8 +180,8 @@ public class WeatherService {
             infoFromTimeResponses.add(new InfoFromTimeResponse(timeList.get(i), weatherList.get(i), tempList.get(i), humidityList.get(i), precipitationTypeList.get(i), precipitationList.get(i), precipitationProbabilityList.get(i)));
         }
 
-        for (int i= 0; i < dateList.size(); i++) {
-            infoFromWeatherRespons.add(new InfoFromWeatherResponse(dateList.get(i), infoFromTimeResponses.get(i)));
+        for (int i = 0; i < dateList.size(); i++) {
+            infoFromWeatherRespons.add(new InfoFromWeatherResponse(dateList.get(i), lowTemp, highTemp, infoFromTimeResponses.get(i)));
         }
 
         WeatherInfoResponse weatherInfoResponse = new WeatherInfoResponse(infoFromWeatherRespons);
@@ -178,7 +218,7 @@ public class WeatherService {
 
     public LatAndLonTransferResponse changeLatAndLonToCoordinate(Double lat, Double lon) {
 
-        LatAndLonTransferResponse response = new LatAndLonTransferResponse(0,0);
+        LatAndLonTransferResponse response = new LatAndLonTransferResponse(0, 0);
 
         double RE = 6371.00877;
         double GRID = 5.0; // 격자 간격(km)
@@ -212,7 +252,7 @@ public class WeatherService {
         if (theta < -Math.PI) theta += 2.0 * Math.PI;
 
         theta *= sn;
-        double x = Math.floor(ra*Math.sin(theta) + XO + 0.5);
+        double x = Math.floor(ra * Math.sin(theta) + XO + 0.5);
         double y = Math.floor(ro - ra * Math.cos(theta) + YO + 0.5);
 
         response.setX((int) x);
@@ -223,7 +263,7 @@ public class WeatherService {
 
     public String timeChange(String time) {
         // 현재 시간에 따라 데이터 시간 설정(3시간 마다 업데이트) //
-        switch(time) {
+        switch (time) {
 
             case "00":
             case "01":
