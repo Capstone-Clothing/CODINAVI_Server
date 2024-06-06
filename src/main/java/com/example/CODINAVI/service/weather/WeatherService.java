@@ -22,15 +22,15 @@ import java.util.List;
 public class WeatherService {
     private final static String BASE_URL = "http://apis.data.go.kr";
 
-    private final LocalDateTime nowTime = LocalDateTime.now();
-    String formatedNow = nowTime.format(DateTimeFormatter.ofPattern("yyyyMMdd HH:mm:ss"));
-    String subStringNowDay = formatedNow.substring(0, 8);
-    String subStringNowTime = formatedNow.substring(9, 11);
-    String base_time = timeChange(subStringNowTime);
-    String base_date = subStringNowDay;
-
-
     public WeatherInfoResponse getWeatherInfo(WeatherRequest request) {
+
+        LocalDateTime nowTime = LocalDateTime.now();
+        String formatedNow = nowTime.format(DateTimeFormatter.ofPattern("yyyyMMdd HH:mm:ss"));
+        String subStringNowDay = formatedNow.substring(0, 8);
+        String subStringNowTime = formatedNow.substring(9, 11);
+        String base_date;
+
+        String base_time = timeChange(subStringNowTime);
 
         if (base_time.equals("2300")) {
             base_date = String.valueOf(Integer.parseInt(subStringNowDay) - 1);
