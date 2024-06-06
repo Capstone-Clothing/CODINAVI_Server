@@ -29,32 +29,13 @@ public class WeatherService {
         String subStringNowDay = formatedNow.substring(0, 8);
         String subStringNowTime = formatedNow.substring(9, 11);
         String base_date;
-
         String base_time = timeChange(subStringNowTime);
 
-        if (base_time.equals("0200")) {
-            base_time = "2300";
-        } else if (base_time.equals("0500")) {
-            base_time = "0200";
-        } else if (base_time.equals("0800")) {
-            base_time = "0500";
-        } else if (base_time.equals("1100")) {
-            base_time = "0800";
-        } else if (base_time.equals("1400")) {
-            base_time = "1100";
-        } else if (base_time.equals("1700")) {
-            base_time = "1400";
-        } else if (base_time.equals("2000")) {
-            base_time = "1700";
-        } else if (base_time.equals("2300")) {
-            base_time = "2000";
+        if (base_time.equals("2300")) {
+            base_date = String.valueOf(Integer.parseInt(subStringNowDay) - 1);
+        } else {
+            base_date = subStringNowDay;
         }
-
-//        if (base_time.equals("2300")) {
-//            base_date = String.valueOf(Integer.parseInt(subStringNowDay) - 1);
-//        } else {
-//            base_date = subStringNowDay;
-//        }
 
         DefaultUriBuilderFactory factory = new DefaultUriBuilderFactory(BASE_URL);
         factory.setEncodingMode(DefaultUriBuilderFactory.EncodingMode.VALUES_ONLY);
@@ -244,45 +225,46 @@ public class WeatherService {
         // 현재 시간에 따라 데이터 시간 설정(3시간 마다 업데이트) //
         switch(time) {
 
-            case "02":
-            case "03":
-            case "04":
-                time = "0200";
-                break;
-            case "05":
-            case "06":
-            case "07":
-                time = "0500";
-                break;
-            case "08":
-            case "09":
-            case "10":
-                time = "0800";
-                break;
-            case "11":
-            case "12":
-            case "13":
-                time = "1100";
-                break;
-            case "14":
-            case "15":
-            case "16":
-                time = "1400";
-                break;
-            case "17":
-            case "18":
-            case "19":
-                time = "1700";
-                break;
-            case "20":
-            case "21":
-            case "22":
-                time = "2000";
-                break;
-            case "23":
             case "00":
             case "01":
+            case "02":
                 time = "2300";
+                break;
+            case "03":
+            case "04":
+            case "05":
+                time = "0200";
+                break;
+            case "06":
+            case "07":
+            case "08":
+                time = "0500";
+                break;
+            case "09":
+            case "10":
+            case "11":
+                time = "0800";
+                break;
+            case "12":
+            case "13":
+            case "14":
+                time = "1100";
+                break;
+            case "15":
+            case "16":
+            case "17":
+                time = "1400";
+                break;
+            case "18":
+            case "19":
+            case "20":
+                time = "1700";
+                break;
+            case "21":
+            case "22":
+            case "23":
+                time = "2000";
+                break;
 
         }
         return time;
