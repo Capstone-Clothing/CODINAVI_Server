@@ -32,12 +32,29 @@ public class WeatherService {
 
         String base_time = timeChange(subStringNowTime);
 
-        log.info("checkTime1 = {}", base_time);
-        if (base_time.equals("2300")) {
-            base_date = String.valueOf(Integer.parseInt(subStringNowDay) - 1);
-        } else {
-            base_date = subStringNowDay;
+        if (base_time.equals("0200")) {
+            base_time = "2300";
+        } else if (base_time.equals("0500")) {
+            base_time = "0200";
+        } else if (base_time.equals("0800")) {
+            base_time = "0500";
+        } else if (base_time.equals("1100")) {
+            base_time = "0800";
+        } else if (base_time.equals("1400")) {
+            base_time = "1100";
+        } else if (base_time.equals("1700")) {
+            base_time = "1400";
+        } else if (base_time.equals("2000")) {
+            base_time = "1700";
+        } else if (base_time.equals("2300")) {
+            base_time = "2000";
         }
+
+//        if (base_time.equals("2300")) {
+//            base_date = String.valueOf(Integer.parseInt(subStringNowDay) - 1);
+//        } else {
+//            base_date = subStringNowDay;
+//        }
 
         DefaultUriBuilderFactory factory = new DefaultUriBuilderFactory(BASE_URL);
         factory.setEncodingMode(DefaultUriBuilderFactory.EncodingMode.VALUES_ONLY);
@@ -49,7 +66,6 @@ public class WeatherService {
                         .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                         .build();
 
-        log.info("checkTime2 = {}", base_time);
         String response =
                 webClient.get()
                         .uri(uriBuilder ->
