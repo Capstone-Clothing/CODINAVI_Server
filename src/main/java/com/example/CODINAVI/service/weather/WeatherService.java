@@ -30,7 +30,8 @@ public class WeatherService {
         String subStringNowTime = formatedNow.substring(9, 11);
         String base_date;
 
-        String base_time = timeChange(subStringNowTime);
+        String base_time = timeChange(subStringNowTime);:wq
+
 
         log.info("checkTime1 = ", base_time);
         if (base_time.equals("2300")) {
@@ -106,6 +107,7 @@ public class WeatherService {
                 timeList.add(fcstTime);
                 tempList.add(fcstValue);
             }
+
 
             if (category.equals("REH")) {
                 humidityList.add(fcstValue);
