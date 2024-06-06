@@ -30,7 +30,7 @@ public class WeatherService {
         String subStringNowTime = formatedNow.substring(9, 11);
         String base_date;
 
-        String base_time = timeChange(subStringNowTime);:wq
+        String base_time = timeChange(subStringNowTime);
 
 
         log.info("checkTime1 = ", base_time);
@@ -274,3 +274,4 @@ public class WeatherService {
     }
 
 }
+
