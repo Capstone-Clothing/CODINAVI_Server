@@ -107,6 +107,7 @@ public class WeatherService {
                 tempList.add(fcstValue);
             }
 
+
             if (category.equals("REH")) {
                 humidityList.add(fcstValue);
             }
@@ -272,3 +273,4 @@ public class WeatherService {
     }
 
 }
+
