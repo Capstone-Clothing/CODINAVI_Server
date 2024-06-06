@@ -32,7 +32,7 @@ public class WeatherService {
 
         String base_time = timeChange(subStringNowTime);
 
-        log.info("checkTime1 = ", base_time);
+        log.info("checkTime1 = {}", base_time);
         if (base_time.equals("2300")) {
             base_date = String.valueOf(Integer.parseInt(subStringNowDay) - 1);
         } else {
@@ -49,7 +49,7 @@ public class WeatherService {
                         .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                         .build();
 
-        log.info("checkTime2 = ", base_time);
+        log.info("checkTime2 = {}", base_time);
         String response =
                 webClient.get()
                         .uri(uriBuilder ->
