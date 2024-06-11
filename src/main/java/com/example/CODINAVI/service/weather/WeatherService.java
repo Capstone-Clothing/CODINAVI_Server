@@ -20,6 +20,8 @@ import java.util.List;
 @Slf4j
 @Service
 public class WeatherService {
+
+
     private final static String BASE_URL = "http://apis.data.go.kr";
 
     public WeatherInfoResponse getWeatherInfo(WeatherRequest request) {

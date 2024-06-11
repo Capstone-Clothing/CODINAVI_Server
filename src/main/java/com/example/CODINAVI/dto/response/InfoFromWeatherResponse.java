@@ -1,7 +1,5 @@
 package com.example.CODINAVI.dto.response;
 
-import lombok.Getter;
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -11,7 +9,6 @@ public class InfoFromWeatherResponse {
     private LocalDateTime nowTime = LocalDateTime.now();
     private String formatedNow = nowTime.format(DateTimeFormatter.ofPattern("yyyyMMdd HH:mm:ss"));
     private String subStringNowDay = formatedNow.substring(0, 8);
-    private String subStringNowTime = formatedNow.substring(9, 11);
 
     private String date;
     private String lowTemp;
