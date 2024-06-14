@@ -1,7 +1,7 @@
 package com.example.CODINAVI.service.weather;
 
-import com.example.CODINAVI.domain.Temp;
-import com.example.CODINAVI.domain.TempCodiRepository;
+import com.example.CODINAVI.domain.TempInfo;
+import com.example.CODINAVI.domain.TempInfoReposiotry;
 import com.example.CODINAVI.dto.request.WeatherCodiRequest;
 import com.example.CODINAVI.dto.request.WeatherRequest;
 import com.example.CODINAVI.dto.response.*;
@@ -23,11 +23,11 @@ import java.util.List;
 @Service
 public class WeatherService {
 
-    private final TempCodiRepository tempCodiRepository;
+    private final TempInfoReposiotry tempInfoReposiotry;
     private final static String BASE_URL = "http://apis.data.go.kr";
 
-    public WeatherService(TempCodiRepository tempCodiRepository) {
-        this.tempCodiRepository = tempCodiRepository;
+    public WeatherService(TempInfoReposiotry tempInfoReposiotry) {
+        this.tempInfoReposiotry = tempInfoReposiotry;
     }
 
     public WeatherInfoResponse getWeatherInfo(WeatherRequest request) {
@@ -197,29 +197,31 @@ public class WeatherService {
         return weatherInfoResponse;
     }
 
-    public CodiForWeatherResponse getRecInfo(WeatherCodiRequest request) {
+    public WeatherCodiResponse getRecInfo(WeatherCodiRequest request) {
 
-        Temp temp;
+        TempInfo tempInfo;
+        log.info("checkRequest={}",request.getGender());
+        log.info("checkRequest={}",request.getTemp());
 
         if (request.getTemp() >= 28.0) {
-            temp = tempCodiRepository.findByGenderAndMinTemp(request.getGender(), 28.0);
+            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(), 28.0);
         } else if (request.getTemp() >= 23.0 && request.getTemp() <= 27.9) {
-            temp = tempCodiRepository.findByGenderAndMinTemp(request.getGender(),23.0);
+            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(),23.0);
         } else if (request.getTemp() >= 20.0 && request.getTemp() <= 22.9) {
-            temp = tempCodiRepository.findByGenderAndMinTemp(request.getGender(), 20.0);
+            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(), 20.0);
         } else if (request.getTemp() >= 17.0 && request.getTemp() <= 19.9) {
-            temp = tempCodiRepository.findByGenderAndMinTemp(request.getGender(), 17.0);
+            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(), 17.0);
         } else if (request.getTemp() >= 12.0 && request.getTemp() <= 16.9) {
-            temp = tempCodiRepository.findByGenderAndMinTemp(request.getGender(), 12.0);
+            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(), 12.0);
         } else if (request.getTemp() >= 9.0 && request.getTemp() <= 11.9) {
-            temp = tempCodiRepository.findByGenderAndMinTemp(request.getGender(), 9.0);
+            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(), 9.0);
         } else if (request.getTemp() >= 5.0 && request.getTemp() <= 8.9) {
-            temp = tempCodiRepository.findByGenderAndMinTemp(request.getGender(), 5.0);
+            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(), 5.0);
         } else {
-            temp = tempCodiRepository.findByGenderAndMinTemp(request.getGender(), -100.0);
+            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(), -100.0);
         }
 
-        CodiForWeatherResponse response = new CodiForWeatherResponse(temp.getCodi(), temp.getClothRec());
+        WeatherCodiResponse response = new WeatherCodiResponse(tempInfo.getCodi(), tempInfo.getClothRec());
         return response;
     }
 
@@ -318,7 +320,7 @@ public class WeatherService {
     }
 
 //    public void makeTable(ColorCreateRequest request) {
-//        Temp tempCodi = new Temp(request.getGender(), request.getMinTemp(), request.getMaxTemp(), request.getCodi(), request.getClothRec());
+//        TempInfo tempCodi = new TempInfo(request.getGender(), request.getMinTemp(), request.getMaxTemp(), request.getCodi(), request.getClothRec());
 //        tempCodiRepository.save(tempCodi);
 //    }
 

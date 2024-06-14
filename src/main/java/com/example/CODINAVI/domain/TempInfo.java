@@ -3,7 +3,7 @@ package com.example.CODINAVI.domain;
 import jakarta.persistence.*;
 
 @Entity
-public class Temp {
+public class TempInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,10 +21,10 @@ public class Temp {
     @Column(nullable = false)
     private String clothRec;
 
-    public Temp() {
+    public TempInfo() {
     }
 
-    public Temp(String gender, Double minTemp, Double maxTemp, String codi, String clothRec) {
+    public TempInfo(String gender, Double minTemp, Double maxTemp, String codi, String clothRec) {
         this.gender = gender;
         this.minTemp = minTemp;
         this.maxTemp = maxTemp;
