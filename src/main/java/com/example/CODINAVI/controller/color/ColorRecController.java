@@ -22,10 +22,5 @@ public class ColorRecController {
     public ColorRecResponse recommend(ColorRecRequest request) {
         return colorRecService.getColorRec(request);
     }
-
-    @PostMapping("/color/insert")
-    public void insert(@RequestBody ColorCreateRequest request) {
-        colorRecService.insertColor(request);
-    }
-    //connection test
 }
+//test

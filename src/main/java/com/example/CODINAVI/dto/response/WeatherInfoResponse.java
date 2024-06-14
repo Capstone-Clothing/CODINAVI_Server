@@ -9,9 +9,9 @@ import java.util.List;
 @Setter
 public class WeatherInfoResponse {
 
-    private List<InfoFromDateResponse> infoFromDateList;
+    private List<InfoFromWeatherResponse> infoFromDateList;
 
-    public WeatherInfoResponse(List<InfoFromDateResponse> infoFromDateList) {
+    public WeatherInfoResponse(List<InfoFromWeatherResponse> infoFromDateList) {
         this.infoFromDateList = infoFromDateList;
     }
 }
