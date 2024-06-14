@@ -30,6 +30,9 @@ public class WeatherService {
         this.tempInfoReposiotry = tempInfoReposiotry;
     }
 
+    List<String> dateList = new ArrayList<>();
+
+
     public WeatherInfoResponse getWeatherInfo(WeatherRequest request) {
 
         LocalDateTime nowTime = LocalDateTime.now();
@@ -80,7 +83,6 @@ public class WeatherService {
         List<String> tempList = new ArrayList<>();
         List<String> weatherList = new ArrayList<>();
         List<String> timeList = new ArrayList<>();
-        List<String> dateList = new ArrayList<>();
         List<String> humidityList = new ArrayList<>();
         List<String> precipitationTypeList = new ArrayList<>();
         List<String> precipitationList = new ArrayList<>();
