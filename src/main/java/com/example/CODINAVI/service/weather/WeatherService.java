@@ -30,9 +30,6 @@ public class WeatherService {
         this.tempInfoReposiotry = tempInfoReposiotry;
     }
 
-    List<String> dateList = new ArrayList<>();
-
-
     public WeatherInfoResponse getWeatherInfo(WeatherRequest request) {
 
         LocalDateTime nowTime = LocalDateTime.now();
@@ -83,6 +80,7 @@ public class WeatherService {
         List<String> tempList = new ArrayList<>();
         List<String> weatherList = new ArrayList<>();
         List<String> timeList = new ArrayList<>();
+        List<String> dateList = new ArrayList<>();
         List<String> humidityList = new ArrayList<>();
         List<String> precipitationTypeList = new ArrayList<>();
         List<String> precipitationList = new ArrayList<>();
@@ -183,7 +181,7 @@ public class WeatherService {
             }
         }
 
-        List<InfoFromWeatherResponse> infoFromWeatherRespons = new ArrayList<>();
+        List<InfoFromWeatherResponse> infoFromWeatherResponse = new ArrayList<>();
         List<InfoFromTimeResponse> infoFromTimeResponses = new ArrayList<>();
 
         for (int i = 0; i < weatherList.size(); i++) {
@@ -191,10 +189,10 @@ public class WeatherService {
         }
 
         for (int i = 0; i < dateList.size(); i++) {
-            infoFromWeatherRespons.add(new InfoFromWeatherResponse(dateList.get(i), lowTemp, highTemp, infoFromTimeResponses.get(i)));
+            infoFromWeatherResponse.add(new InfoFromWeatherResponse(dateList.get(i), lowTemp, highTemp, infoFromTimeResponses.get(i)));
         }
 
-        WeatherInfoResponse weatherInfoResponse = new WeatherInfoResponse(infoFromWeatherRespons);
+        WeatherInfoResponse weatherInfoResponse = new WeatherInfoResponse(infoFromWeatherResponse);
 
         return weatherInfoResponse;
     }
@@ -320,11 +318,5 @@ public class WeatherService {
         }
         return time;
     }
-
-//    public void makeTable(ColorCreateRequest request) {
-//        TempInfo tempCodi = new TempInfo(request.getGender(), request.getMinTemp(), request.getMaxTemp(), request.getCodi(), request.getClothRec());
-//        tempCodiRepository.save(tempCodi);
-//    }
-
 }
 
