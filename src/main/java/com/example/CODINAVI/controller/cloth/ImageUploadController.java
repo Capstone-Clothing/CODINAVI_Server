@@ -39,6 +39,10 @@ public class ImageUploadController {
                 .credentialsProvider(StaticCredentialsProvider.create(awsCreds))
                 .build();
     }
+    @GetMapping("/upload")
+    public ResponseEntity<String> handleGetRequests() {
+        return new ResponseEntity<>("GET method is not supported for this endpoint. Please use POST method.", HttpStatus.METHOD_NOT_ALLOWED);
+    }
 
     @PostMapping("/upload")
     public ResponseEntity<String> uploadImage(@RequestParam("Imagefile") MultipartFile file) {
