@@ -21,9 +21,11 @@ public class WeatherController {
     public WeatherInfoResponse getWeather(WeatherRequest request) {
         return weatherService.getWeatherInfo(request);
     }
+
     @GetMapping("/weather/clothInfo")
     public CodiForWeatherResponse weatherApi(TempRequest request) {
         return weatherService.getRecInfo(request);
     }
+
 }
 
