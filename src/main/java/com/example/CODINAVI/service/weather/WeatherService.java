@@ -1,6 +1,8 @@
 package com.example.CODINAVI.service.weather;
 
-import com.example.CODINAVI.dto.request.TempRequest;
+import com.example.CODINAVI.domain.TempInfo;
+import com.example.CODINAVI.domain.TempInfoReposiotry;
+import com.example.CODINAVI.dto.request.WeatherCodiRequest;
 import com.example.CODINAVI.dto.request.WeatherRequest;
 import com.example.CODINAVI.dto.response.*;
 import lombok.extern.slf4j.Slf4j;
@@ -21,8 +23,12 @@ import java.util.List;
 @Service
 public class WeatherService {
 
-
+    private final TempInfoReposiotry tempInfoReposiotry;
     private final static String BASE_URL = "http://apis.data.go.kr";
+
+    public WeatherService(TempInfoReposiotry tempInfoReposiotry) {
+        this.tempInfoReposiotry = tempInfoReposiotry;
+    }
 
     public WeatherInfoResponse getWeatherInfo(WeatherRequest request) {
 
@@ -175,7 +181,7 @@ public class WeatherService {
             }
         }
 
-        List<InfoFromWeatherResponse> infoFromWeatherRespons = new ArrayList<>();
+        List<InfoFromWeatherResponse> infoFromWeatherResponse = new ArrayList<>();
         List<InfoFromTimeResponse> infoFromTimeResponses = new ArrayList<>();
 
         for (int i = 0; i < weatherList.size(); i++) {
@@ -183,38 +189,39 @@ public class WeatherService {
         }
 
         for (int i = 0; i < dateList.size(); i++) {
-            infoFromWeatherRespons.add(new InfoFromWeatherResponse(dateList.get(i), lowTemp, highTemp, infoFromTimeResponses.get(i)));
+            infoFromWeatherResponse.add(new InfoFromWeatherResponse(dateList.get(i), lowTemp, highTemp, infoFromTimeResponses.get(i)));
         }
 
-        WeatherInfoResponse weatherInfoResponse = new WeatherInfoResponse(infoFromWeatherRespons);
+        WeatherInfoResponse weatherInfoResponse = new WeatherInfoResponse(infoFromWeatherResponse);
 
         return weatherInfoResponse;
     }
 
-    public CodiForWeatherResponse getRecInfo(TempRequest request) {
+    public WeatherCodiResponse getRecInfo(WeatherCodiRequest request) {
 
-        String recInfo;
+        TempInfo tempInfo;
+        log.info("checkRequest={}",request.getGender());
+        log.info("checkRequest={}",request.getTemp());
 
-        if (request.getTemp() >= 28) {
-            recInfo = "상의는 민소매, 반팔을 추천해드리며 하의는 짧은 치마, 린넨 옷, 반바지를 추천드립니다.";
-        } else if (request.getTemp() >= 23 && request.getTemp() <= 27.9) {
-            recInfo = "상의는 얇은 셔츠, 반팔을 추천해드리며 하의는 반바지, 면바지를 추천드립니다.";
-        } else if (request.getTemp() >= 20 && request.getTemp() <= 22.9) {
-            recInfo = "상의는 블라우스, 긴팔티를 추천해드리며 하의는 면바지, 슬랙스를 추천드립니다.";
-        } else if (request.getTemp() >= 17 && request.getTemp() <= 19.9) {
-            recInfo = "상의는 얇은 가디건, 니트, 맨투맨, 후드를 추천해드리며 하의는 긴 바지를 추천드립니다.";
-        } else if (request.getTemp() >= 12 && request.getTemp() <= 16.9) {
-            recInfo = "상의는 자켓 또는 청자켓, 가디건, 니트를 추천해드리며 하의는 스타킹, 청바지를 추천드립니다.";
-        } else if (request.getTemp() >= 9 && request.getTemp() <= 11.9) {
-            recInfo = "상의는 트렌치 코트, 야상, 점퍼를 추천해드리며 하의는 스타킹, 기모바지를 추천드립니다.";
-        } else if (request.getTemp() >= 5 && request.getTemp() <= 8.9) {
-            recInfo = "상의는 울 코트 또는 가죽 옷과 히트텍을 추천해드리며 하의 또한 기모가 들어간 바지를 추천드립니다.";
+        if (request.getTemp() >= 28.0) {
+            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(), 28.0);
+        } else if (request.getTemp() >= 23.0 && request.getTemp() <= 27.9) {
+            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(),23.0);
+        } else if (request.getTemp() >= 20.0 && request.getTemp() <= 22.9) {
+            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(), 20.0);
+        } else if (request.getTemp() >= 17.0 && request.getTemp() <= 19.9) {
+            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(), 17.0);
+        } else if (request.getTemp() >= 12.0 && request.getTemp() <= 16.9) {
+            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(), 12.0);
+        } else if (request.getTemp() >= 9.0 && request.getTemp() <= 11.9) {
+            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(), 9.0);
+        } else if (request.getTemp() >= 5.0 && request.getTemp() <= 8.9) {
+            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(), 5.0);
         } else {
-            recInfo = "상의는 패딩, 두꺼운 코트, 누빔 옷, 기모가 들어간 소재, 그리고 목도리를 걸치시는 것을 추천드립니다.";
+            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(), -100.0);
         }
 
-        CodiForWeatherResponse response = new CodiForWeatherResponse(recInfo);
-
+        WeatherCodiResponse response = new WeatherCodiResponse(tempInfo.getCodi(), tempInfo.getClothRec());
         return response;
     }
 
@@ -311,6 +318,5 @@ public class WeatherService {
         }
         return time;
     }
-
 }
 
