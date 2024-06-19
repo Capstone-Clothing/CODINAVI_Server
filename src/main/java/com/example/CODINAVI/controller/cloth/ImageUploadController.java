@@ -59,6 +59,8 @@ public class ImageUploadController {
             s3Client.putObject(PutObjectRequest.builder()
                             .bucket(bucketName)
                             .key(key)
+                            .contentType(file.getContentType())
+                            .contentDisposition("inline")
                             .build(),
                     software.amazon.awssdk.core.sync.RequestBody.fromBytes(file.getBytes()));
             logger.info("Image uploaded successfully with key: {}", key);
