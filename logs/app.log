@@ -1,0 +1,86 @@
+2024-06-20T01:53:00.272+09:00  INFO 3728 --- [main] c.example.CODINAVI.CodinaviApplication   : Starting CodinaviApplication using Java 17.0.11 with PID 3728 (C:\Users\JMJ\CODINAVI\CODINAVI_SpringBoot\build\classes\java\main started by JMJ in C:\Users\JMJ\CODINAVI\CODINAVI_SpringBoot)
+2024-06-20T01:53:00.273+09:00 DEBUG 3728 --- [main] c.example.CODINAVI.CodinaviApplication   : Running with Spring Boot v3.1.0, Spring v6.0.9
+2024-06-20T01:53:00.273+09:00  INFO 3728 --- [main] c.example.CODINAVI.CodinaviApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-06-20T01:53:00.606+09:00  INFO 3728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-20T01:53:00.691+09:00  INFO 3728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 2 JPA repository interfaces.
+2024-06-20T01:53:00.970+09:00  INFO 3728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-06-20T01:53:00.976+09:00  INFO 3728 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-20T01:53:00.976+09:00  INFO 3728 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-06-20T01:53:01.037+09:00  INFO 3728 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-20T01:53:01.037+09:00  INFO 3728 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 740 ms
+2024-06-20T01:53:01.118+09:00  INFO 3728 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-20T01:53:01.144+09:00  INFO 3728 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2024-06-20T01:53:01.146+09:00  INFO 3728 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-06-20T01:53:01.225+09:00  INFO 3728 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-06-20T01:53:01.319+09:00  INFO 3728 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-20T01:53:01.328+09:00  INFO 3728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-20T01:53:01.804+09:00  INFO 3728 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3041beb3
+2024-06-20T01:53:01.806+09:00  INFO 3728 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-20T01:53:01.854+09:00  INFO 3728 --- [main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2024-06-20T01:53:01.855+09:00  WARN 3728 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-06-20T01:53:01.966+09:00  INFO 3728 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-06-20T01:53:02.335+09:00  INFO 3728 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-20T01:53:02.337+09:00  INFO 3728 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-20T01:53:02.825+09:00  WARN 3728 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-20T01:53:02.860+09:00 DEBUG 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-20T01:53:02.905+09:00 DEBUG 3728 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2024-06-20T01:53:02.916+09:00 DEBUG 3728 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-06-20T01:53:02.921+09:00 DEBUG 3728 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-20T01:53:02.929+09:00  WARN 3728 --- [main] o.s.b.a.m.MustacheAutoConfiguration      : Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2024-06-20T01:53:02.943+09:00  WARN 3728 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-06-20T01:53:03.035+09:00  INFO 3728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-06-20T01:53:03.040+09:00  INFO 3728 --- [main] c.example.CODINAVI.CodinaviApplication   : Started CodinaviApplication in 3.033 seconds (process running for 4.063)
+2024-06-20T01:55:02.370+09:00  INFO 3728 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-20T01:55:02.372+09:00  INFO 3728 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-20T01:55:02.411+09:00  INFO 3728 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-20T01:55:16.614+09:00  INFO 1696 --- [main] c.example.CODINAVI.CodinaviApplication   : Starting CodinaviApplication using Java 17.0.11 with PID 1696 (C:\Users\JMJ\CODINAVI\CODINAVI_SpringBoot\build\classes\java\main started by JMJ in C:\Users\JMJ\CODINAVI\CODINAVI_SpringBoot)
+2024-06-20T01:55:16.615+09:00 DEBUG 1696 --- [main] c.example.CODINAVI.CodinaviApplication   : Running with Spring Boot v3.1.0, Spring v6.0.9
+2024-06-20T01:55:16.616+09:00  INFO 1696 --- [main] c.example.CODINAVI.CodinaviApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-06-20T01:55:16.950+09:00  INFO 1696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-20T01:55:17.037+09:00  INFO 1696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 2 JPA repository interfaces.
+2024-06-20T01:55:17.290+09:00  INFO 1696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-06-20T01:55:17.295+09:00  INFO 1696 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-20T01:55:17.296+09:00  INFO 1696 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.8]
+2024-06-20T01:55:17.361+09:00  INFO 1696 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-20T01:55:17.361+09:00  INFO 1696 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 723 ms
+2024-06-20T01:55:17.440+09:00  INFO 1696 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-20T01:55:17.467+09:00  INFO 1696 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.2.Final
+2024-06-20T01:55:17.468+09:00  INFO 1696 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-06-20T01:55:17.537+09:00  INFO 1696 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-06-20T01:55:17.619+09:00  INFO 1696 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-20T01:55:17.629+09:00  INFO 1696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-20T01:55:17.846+09:00  INFO 1696 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3bf5911d
+2024-06-20T01:55:17.847+09:00  INFO 1696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-20T01:55:17.875+09:00  INFO 1696 --- [main] org.hibernate.orm.dialect                : HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2024-06-20T01:55:17.876+09:00  WARN 1696 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-06-20T01:55:17.967+09:00  INFO 1696 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2024-06-20T01:55:18.309+09:00  INFO 1696 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-06-20T01:55:18.311+09:00  INFO 1696 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-20T01:55:18.772+09:00  WARN 1696 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-20T01:55:18.807+09:00 DEBUG 1696 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-20T01:55:18.850+09:00 DEBUG 1696 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2024-06-20T01:55:18.859+09:00 DEBUG 1696 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-06-20T01:55:18.864+09:00 DEBUG 1696 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-20T01:55:18.872+09:00  WARN 1696 --- [main] o.s.b.a.m.MustacheAutoConfiguration      : Cannot find template location: classpath:/templates/ (please add some templates, check your Mustache configuration, or set spring.mustache.check-template-location=false)
+2024-06-20T01:55:18.884+09:00  WARN 1696 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-06-20T01:55:18.980+09:00  INFO 1696 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-06-20T01:55:18.983+09:00  INFO 1696 --- [main] c.example.CODINAVI.CodinaviApplication   : Started CodinaviApplication in 2.63 seconds (process running for 2.941)
+2024-06-20T01:55:29.509+09:00  INFO 1696 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-20T01:55:29.509+09:00  INFO 1696 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-20T01:55:29.509+09:00 DEBUG 1696 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-06-20T01:55:29.509+09:00 DEBUG 1696 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-06-20T01:55:29.509+09:00 DEBUG 1696 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-06-20T01:55:29.510+09:00 DEBUG 1696 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@26c494d7
+2024-06-20T01:55:29.510+09:00 DEBUG 1696 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5e38329d
+2024-06-20T01:55:29.510+09:00 DEBUG 1696 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-20T01:55:29.511+09:00  INFO 1696 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-06-20T01:55:29.516+09:00 DEBUG 1696 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/weather/clothInfo?temp=14&gender=%EC%97%AC%EC%9E%90", parameters={masked}
+2024-06-20T01:55:29.522+09:00 DEBUG 1696 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.CODINAVI.controller.weather.WeatherController#weatherApi(WeatherCodiRequest)
+2024-06-20T01:55:29.536+09:00  INFO 1696 --- [http-nio-8080-exec-2] c.e.C.service.weather.WeatherService     : checkRequest=여자
+2024-06-20T01:55:29.536+09:00  INFO 1696 --- [http-nio-8080-exec-2] c.e.C.service.weather.WeatherService     : checkRequest=14.0
+2024-06-20T01:55:29.650+09:00 DEBUG 1696 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-06-20T01:55:29.651+09:00 DEBUG 1696 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [com.example.CODINAVI.dto.response.WeatherCodiResponse@7ca669ba]
+2024-06-20T01:55:29.659+09:00 DEBUG 1696 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-06-20T01:55:35.678+09:00  INFO 1696 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-20T01:55:35.679+09:00  INFO 1696 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-20T01:55:35.713+09:00  INFO 1696 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
