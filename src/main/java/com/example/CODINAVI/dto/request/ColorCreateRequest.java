@@ -1,42 +1,23 @@
 package com.example.CODINAVI.dto.request;
 
 import jakarta.persistence.Column;
+import lombok.Getter;
 
+@Getter
 public class ColorCreateRequest {
 
-    private String color;
-    private String rgb;
-    private String pantoneRgb;
-    private String hsv;
-    private String tcx;
-    private String colorForApp;
-    private String matchColor;
+    private String gender;
+    private Double minTemp;
+    private Double maxTemp;
+    private String codi;
+    private String clothRec;
 
-    public String getColor() {
-        return color;
-    }
 
-    public String getRgb() {
-        return rgb;
-    }
-
-    public String getPantoneRgb() {
-        return pantoneRgb;
-    }
-
-    public String getHsv() {
-        return hsv;
-    }
-
-    public String getTcx() {
-        return tcx;
-    }
-
-    public String getColorForApp() {
-        return colorForApp;
-    }
-
-    public String getMatchColor() {
-        return matchColor;
+    public ColorCreateRequest(String gender, Double minTemp, Double maxTemp, String codi, String clothRec) {
+        this.gender = gender;
+        this.minTemp = minTemp;
+        this.maxTemp = maxTemp;
+        this.codi = codi;
+        this.clothRec = clothRec;
     }
 }
