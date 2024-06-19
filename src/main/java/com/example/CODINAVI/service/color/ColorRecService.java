@@ -19,7 +19,7 @@ public class ColorRecService {
     }
 
     public ColorRecResponse getColorRec(ColorRecRequest request) {
-        Color color = colorRecRepository.findByColor(request.getColor());
+        Color color = colorRecRepository.findByColorForApp(request.getColor());
         return new ColorRecResponse(color.getMatchColor());
     }
 
