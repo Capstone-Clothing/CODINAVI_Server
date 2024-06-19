@@ -39,6 +39,7 @@ public class ImageUploadController {
                 .credentialsProvider(StaticCredentialsProvider.create(awsCreds))
                 .build();
     }
+
     @GetMapping("/upload")
     public ResponseEntity<String> handleGetRequests() {
         return new ResponseEntity<>("GET method is not supported for this endpoint. Please use POST method.", HttpStatus.METHOD_NOT_ALLOWED);
@@ -58,6 +59,8 @@ public class ImageUploadController {
             s3Client.putObject(PutObjectRequest.builder()
                             .bucket(bucketName)
                             .key(key)
+                            .contentType(file.getContentType())
+                            .contentDisposition("inline")
                             .build(),
                     software.amazon.awssdk.core.sync.RequestBody.fromBytes(file.getBytes()));
             logger.info("Image uploaded successfully with key: {}", key);
