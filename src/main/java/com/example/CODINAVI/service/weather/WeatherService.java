@@ -23,8 +23,8 @@ import java.util.List;
 @Service
 public class WeatherService {
 
-    private final TempInfoReposiotry tempInfoReposiotry;
     private final static String BASE_URL = "http://apis.data.go.kr";
+    private final TempInfoReposiotry tempInfoReposiotry;
 
     public WeatherService(TempInfoReposiotry tempInfoReposiotry) {
         this.tempInfoReposiotry = tempInfoReposiotry;
@@ -200,13 +200,13 @@ public class WeatherService {
     public WeatherCodiResponse getRecInfo(WeatherCodiRequest request) {
 
         TempInfo tempInfo;
-        log.info("checkRequest={}",request.getGender());
-        log.info("checkRequest={}",request.getTemp());
+        log.info("checkRequest={}", request.getGender());
+        log.info("checkRequest={}", request.getTemp());
 
         if (request.getTemp() >= 28.0) {
             tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(), 28.0);
         } else if (request.getTemp() >= 23.0 && request.getTemp() <= 27.9) {
-            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(),23.0);
+            tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(), 23.0);
         } else if (request.getTemp() >= 20.0 && request.getTemp() <= 22.9) {
             tempInfo = tempInfoReposiotry.findByGenderAndMinTemp(request.getGender(), 20.0);
         } else if (request.getTemp() >= 17.0 && request.getTemp() <= 19.9) {

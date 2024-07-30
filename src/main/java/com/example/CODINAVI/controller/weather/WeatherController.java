@@ -16,14 +16,9 @@ public class WeatherController {
     public WeatherController(WeatherService weatherService) {
         this.weatherService = weatherService;
     }
-//
-//    @PostMapping("/weather")
-//    public void makeTable(@RequestBody ColorCreateRequest request) {
-//        weatherService.makeTable(request);
-//    }
 
     @GetMapping("/weather")
-    public WeatherInfoResponse getWeather(WeatherRequest request) {
+    public WeatherInfoResponse getWeatherInfo(WeatherRequest request) {
         return weatherService.getWeatherInfo(request);
     }
 
