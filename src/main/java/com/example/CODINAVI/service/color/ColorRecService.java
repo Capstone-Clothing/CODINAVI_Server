@@ -1,7 +1,7 @@
 package com.example.CODINAVI.service.color;
 
 import com.example.CODINAVI.dto.request.ColorRecRequest;
-import com.example.CODINAVI.dto.response.ColorRecResponse;
+import com.example.CODINAVI.dto.response.color.ColorRecResponse;
 import com.example.CODINAVI.domain.Color;
 import com.example.CODINAVI.domain.ColorRecRepository;
 import lombok.extern.slf4j.Slf4j;

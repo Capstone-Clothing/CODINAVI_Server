@@ -2,8 +2,8 @@ package com.example.CODINAVI.controller.weather;
 
 import com.example.CODINAVI.dto.request.WeatherCodiRequest;
 import com.example.CODINAVI.dto.request.WeatherRequest;
-import com.example.CODINAVI.dto.response.WeatherCodiResponse;
-import com.example.CODINAVI.dto.response.WeatherInfoResponse;
+import com.example.CODINAVI.dto.response.weather.WeatherCodiResponse;
+import com.example.CODINAVI.dto.response.weather.WeatherInfoResponse;
 import com.example.CODINAVI.service.weather.WeatherService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

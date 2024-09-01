@@ -1,4 +1,4 @@
-package com.example.CODINAVI.dto.response;
+package com.example.CODINAVI.dto.response.weather;
 
 import lombok.Getter;
 

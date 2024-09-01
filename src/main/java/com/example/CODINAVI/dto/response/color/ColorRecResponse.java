@@ -1,4 +1,4 @@
-package com.example.CODINAVI.dto.response;
+package com.example.CODINAVI.dto.response.color;
 
 public class ColorRecResponse {
 

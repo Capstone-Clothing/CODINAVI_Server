@@ -4,7 +4,7 @@ import com.example.CODINAVI.domain.TempInfo;
 import com.example.CODINAVI.domain.TempInfoReposiotry;
 import com.example.CODINAVI.dto.request.WeatherCodiRequest;
 import com.example.CODINAVI.dto.request.WeatherRequest;
-import com.example.CODINAVI.dto.response.*;
+import com.example.CODINAVI.dto.response.weather.*;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONArray;
 import org.json.JSONObject;
