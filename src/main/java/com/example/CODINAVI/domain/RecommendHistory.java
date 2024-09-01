@@ -12,13 +12,20 @@ public class RecommendHistory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private Long parentId;
     private String result;
 
-    public RecommendHistory(String result) {
+    public RecommendHistory(Long parentId, String result) {
+        this.parentId = parentId;
         this.result = result;
     }
 
     public RecommendHistory() {
+
+    }
+
+    public Long getParentId() {
+        return parentId;
     }
 
     public String getResult() {

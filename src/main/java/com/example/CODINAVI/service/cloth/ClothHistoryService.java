@@ -7,6 +7,7 @@ import com.example.CODINAVI.domain.RecommendHistoryRepository;
 import com.example.CODINAVI.dto.request.cloth.ClothHistoryRequest;
 import com.example.CODINAVI.dto.request.cloth.ClothRecommendHistoryRequest;
 import com.example.CODINAVI.dto.response.cloth.ClothHistoryResponse;
+import com.example.CODINAVI.dto.response.cloth.RecommendClothHistory;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -36,13 +37,18 @@ public class ClothHistoryService {
         return responseList;
     }
 
-    public void saveClothHistory(ClothHistoryRequest request) {
+    public RecommendClothHistory getRecommendClothHistory(Long id) {
+        RecommendHistory history = recommendHistoryRepository.findByParentId(id);
+        return new RecommendClothHistory(history.getResult());
+    }
+    public ClothHistory saveClothHistory(ClothHistoryRequest request) {
         ClothHistory clothHistory = new ClothHistory(request.getColor(), request.getPattern(), request.getType());
         clothHistoryRepository.save(clothHistory);
+        return clothHistory;
     }
 
     public void saveClothRecommendHistory(ClothRecommendHistoryRequest request) {
-        RecommendHistory history = new RecommendHistory(request.getResult());
+        RecommendHistory history = new RecommendHistory(request.getParentId(), request.getResult());
         recommendHistoryRepository.save(history);
     }
 }
