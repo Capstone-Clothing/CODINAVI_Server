@@ -28,7 +28,7 @@ public class ClothHistoryService {
         ArrayList<ClothHistoryResponse> responseList = new ArrayList<>();
         for (int i = 0; i < allList.size(); i++) {
             if (allList.get(i) != null) {
-                responseList.add(new ClothHistoryResponse(allList.get(i).getColor(), allList.get(i).getPattern(),
+                responseList.add(new ClothHistoryResponse(allList.get(i).getId(), allList.get(i).getColor(), allList.get(i).getPattern(),
                         allList.get(i).getType()));
             }
         }

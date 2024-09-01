@@ -25,6 +25,10 @@ public class ClothHistory {
         this.type = type;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getColor() {
         return color;
     }
