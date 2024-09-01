@@ -19,6 +19,12 @@ public class ClothHistory {
     public ClothHistory() {
     }
 
+    public ClothHistory(String color, String pattern, String type) {
+        this.color = color;
+        this.pattern = pattern;
+        this.type = type;
+    }
+
     public String getColor() {
         return color;
     }

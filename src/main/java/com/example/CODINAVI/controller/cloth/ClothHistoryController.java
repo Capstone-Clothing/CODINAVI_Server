@@ -1,6 +1,6 @@
 package com.example.CODINAVI.controller.cloth;
 
-import com.example.CODINAVI.dto.request.ClothHistoryRequest;
+import com.example.CODINAVI.dto.request.cloth.ClothHistoryRequest;
 import com.example.CODINAVI.dto.response.cloth.ClothHistoryResponse;
 import com.example.CODINAVI.service.cloth.ClothHistoryService;
 import org.springframework.web.bind.annotation.GetMapping;

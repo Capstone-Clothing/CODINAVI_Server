@@ -2,7 +2,7 @@ package com.example.CODINAVI.service.cloth;
 
 import com.example.CODINAVI.domain.ClothHistory;
 import com.example.CODINAVI.domain.ClothHistoryRepository;
-import com.example.CODINAVI.dto.request.ClothHistoryRequest;
+import com.example.CODINAVI.dto.request.cloth.ClothHistoryRequest;
 import com.example.CODINAVI.dto.response.cloth.ClothHistoryResponse;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +32,7 @@ public class ClothHistoryService {
     }
 
     public void saveClothHistory(ClothHistoryRequest request) {
-
+        ClothHistory clothHistory = new ClothHistory(request.getColor(), request.getPattern(), request.getType());
+        clothHistoryRepository.save(clothHistory);
     }
 }

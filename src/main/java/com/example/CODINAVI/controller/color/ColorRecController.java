@@ -1,6 +1,6 @@
 package com.example.CODINAVI.controller.color;
 
-import com.example.CODINAVI.dto.request.ColorRecRequest;
+import com.example.CODINAVI.dto.request.color.ColorRecRequest;
 import com.example.CODINAVI.dto.response.color.ColorRecResponse;
 import com.example.CODINAVI.service.color.ColorRecService;
 import org.springframework.web.bind.annotation.GetMapping;

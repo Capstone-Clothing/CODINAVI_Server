@@ -1,7 +1,7 @@
 package com.example.CODINAVI.controller.weather;
 
-import com.example.CODINAVI.dto.request.WeatherCodiRequest;
-import com.example.CODINAVI.dto.request.WeatherRequest;
+import com.example.CODINAVI.dto.request.weather.WeatherCodiRequest;
+import com.example.CODINAVI.dto.request.weather.WeatherRequest;
 import com.example.CODINAVI.dto.response.weather.WeatherCodiResponse;
 import com.example.CODINAVI.dto.response.weather.WeatherInfoResponse;
 import com.example.CODINAVI.service.weather.WeatherService;

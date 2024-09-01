@@ -1,4 +1,4 @@
-package com.example.CODINAVI.dto.request;
+package com.example.CODINAVI.dto.request.color;
 
 public class ColorRecRequest {
 

@@ -1,6 +1,6 @@
 package com.example.CODINAVI.service.color;
 
-import com.example.CODINAVI.dto.request.ColorRecRequest;
+import com.example.CODINAVI.dto.request.color.ColorRecRequest;
 import com.example.CODINAVI.dto.response.color.ColorRecResponse;
 import com.example.CODINAVI.domain.Color;
 import com.example.CODINAVI.domain.ColorRecRepository;
