@@ -18,8 +18,9 @@ public class ClothHistoryService {
     ClothHistoryRepository clothHistoryRepository;
     RecommendHistoryRepository recommendHistoryRepository;
 
-    public ClothHistoryService(ClothHistoryRepository clothHistoryRepository) {
+    public ClothHistoryService(ClothHistoryRepository clothHistoryRepository, RecommendHistoryRepository recommendHistoryRepository) {
         this.clothHistoryRepository = clothHistoryRepository;
+        this.recommendHistoryRepository = recommendHistoryRepository;
     }
 
     public List<ClothHistoryResponse> getClothHistory() {
