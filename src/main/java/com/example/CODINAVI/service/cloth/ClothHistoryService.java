@@ -1,13 +1,12 @@
 package com.example.CODINAVI.service.cloth;
 
-import com.example.CODINAVI.domain.ClothHistory;
-import com.example.CODINAVI.domain.ClothHistoryRepository;
-import com.example.CODINAVI.domain.RecommendHistory;
-import com.example.CODINAVI.domain.RecommendHistoryRepository;
+import com.example.CODINAVI.domain.*;
 import com.example.CODINAVI.dto.request.cloth.ClothHistoryRequest;
 import com.example.CODINAVI.dto.request.cloth.ClothRecommendHistoryRequest;
+import com.example.CODINAVI.dto.request.cloth.ColorRecommendHistoryRequest;
 import com.example.CODINAVI.dto.response.cloth.ClothHistoryResponse;
 import com.example.CODINAVI.dto.response.cloth.RecommendClothHistory;
+import com.example.CODINAVI.dto.response.cloth.RecommendColorHistory;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,10 +17,12 @@ public class ClothHistoryService {
 
     ClothHistoryRepository clothHistoryRepository;
     RecommendHistoryRepository recommendHistoryRepository;
+    ColorRecommendHistoryRepository colorRecommendHistoryRepository;
 
-    public ClothHistoryService(ClothHistoryRepository clothHistoryRepository, RecommendHistoryRepository recommendHistoryRepository) {
+    public ClothHistoryService(ClothHistoryRepository clothHistoryRepository, RecommendHistoryRepository recommendHistoryRepository, ColorRecommendHistoryRepository colorRecommendHistoryRepository) {
         this.clothHistoryRepository = clothHistoryRepository;
         this.recommendHistoryRepository = recommendHistoryRepository;
+        this.colorRecommendHistoryRepository = colorRecommendHistoryRepository;
     }
 
     public List<ClothHistoryResponse> getClothHistory() {
@@ -41,10 +42,20 @@ public class ClothHistoryService {
         RecommendHistory history = recommendHistoryRepository.findByParentId(id);
         return new RecommendClothHistory(history.getResult());
     }
+
+    public RecommendColorHistory getColorRecommendHistory(Long id) {
+        ColorRecommendHistory history = colorRecommendHistoryRepository.findByParentId(id);
+        return new RecommendColorHistory(history.getResult());
+    }
     public ClothHistory saveClothHistory(ClothHistoryRequest request) {
         ClothHistory clothHistory = new ClothHistory(request.getColor(), request.getPattern(), request.getType());
         clothHistoryRepository.save(clothHistory);
         return clothHistory;
+    }
+
+    public void saveColorRecommendHistory(ColorRecommendHistoryRequest request) {
+        ColorRecommendHistory history = new ColorRecommendHistory(request.getParentId(), request.getResult());
+        colorRecommendHistoryRepository.save(history);
     }
 
     public void saveClothRecommendHistory(ClothRecommendHistoryRequest request) {
