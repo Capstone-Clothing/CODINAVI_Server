@@ -2,7 +2,10 @@ package com.example.CODINAVI.service.cloth;
 
 import com.example.CODINAVI.domain.ClothHistory;
 import com.example.CODINAVI.domain.ClothHistoryRepository;
+import com.example.CODINAVI.domain.RecommendHistory;
+import com.example.CODINAVI.domain.RecommendHistoryRepository;
 import com.example.CODINAVI.dto.request.cloth.ClothHistoryRequest;
+import com.example.CODINAVI.dto.request.cloth.ClothRecommendHistoryRequest;
 import com.example.CODINAVI.dto.response.cloth.ClothHistoryResponse;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +16,7 @@ import java.util.List;
 public class ClothHistoryService {
 
     ClothHistoryRepository clothHistoryRepository;
+    RecommendHistoryRepository recommendHistoryRepository;
 
     public ClothHistoryService(ClothHistoryRepository clothHistoryRepository) {
         this.clothHistoryRepository = clothHistoryRepository;
@@ -34,5 +38,10 @@ public class ClothHistoryService {
     public void saveClothHistory(ClothHistoryRequest request) {
         ClothHistory clothHistory = new ClothHistory(request.getColor(), request.getPattern(), request.getType());
         clothHistoryRepository.save(clothHistory);
+    }
+
+    public void saveClothRecommendHistory(ClothRecommendHistoryRequest request) {
+        RecommendHistory history = new RecommendHistory(request.getResult());
+        recommendHistoryRepository.save(history);
     }
 }

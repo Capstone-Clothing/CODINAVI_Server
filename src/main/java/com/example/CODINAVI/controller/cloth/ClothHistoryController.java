@@ -1,6 +1,7 @@
 package com.example.CODINAVI.controller.cloth;
 
 import com.example.CODINAVI.dto.request.cloth.ClothHistoryRequest;
+import com.example.CODINAVI.dto.request.cloth.ClothRecommendHistoryRequest;
 import com.example.CODINAVI.dto.response.cloth.ClothHistoryResponse;
 import com.example.CODINAVI.service.cloth.ClothHistoryService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,5 +28,10 @@ public class ClothHistoryController {
     @PostMapping("/cloth/history")
     public void saveClothHistory(@RequestBody ClothHistoryRequest request) {
         clothHistoryService.saveClothHistory(request);
+    }
+
+    @PostMapping("/cloth/recommendHistory")
+    public void saveClothRecommendHistory(@RequestBody ClothRecommendHistoryRequest request) {
+        clothHistoryService.saveClothRecommendHistory(request);
     }
 }
