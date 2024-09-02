@@ -53,7 +53,7 @@ public class ClothHistoryService {
         return new RecommendColorHistory(history.getResult());
     }
     public ClothHistory saveClothHistory(ClothHistoryRequest request) {
-        ClothHistory clothHistory = new ClothHistory(request.getColor(), request.getPattern(), request.getType());
+        ClothHistory clothHistory = new ClothHistory(request.getUserId(), request.getColor(), request.getPattern(), request.getType());
         clothHistoryRepository.save(clothHistory);
         return clothHistory;
     }
