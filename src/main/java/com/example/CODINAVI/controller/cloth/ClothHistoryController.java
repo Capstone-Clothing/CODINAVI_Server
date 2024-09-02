@@ -21,9 +21,9 @@ public class ClothHistoryController {
         this.clothHistoryService = clothHistoryService;
     }
 
-    @GetMapping("/cloth/history")
-    public List<ClothHistoryResponse> getClothHistory() {
-        return clothHistoryService.getClothHistory();
+    @GetMapping("/cloth/history/{userId}")
+    public List<ClothHistoryResponse> getClothHistory(@PathVariable String userId) {
+        return clothHistoryService.getClothHistory(userId);
     }
 
     @GetMapping("/cloth/recommendHistory/{id}")
@@ -33,7 +33,7 @@ public class ClothHistoryController {
 
     @GetMapping("/cloth/colorRecommendHistory/{id}")
     public RecommendColorHistory getColorRecommendHistory(@PathVariable Long id) {
-        return clothHistoryService.getColorRecommendHistory(id);
+        return clothHistoryService.getRecommendColorHistory(id);
     }
 
     @PostMapping("/cloth/history")

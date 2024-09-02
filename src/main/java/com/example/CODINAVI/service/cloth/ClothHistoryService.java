@@ -30,8 +30,8 @@ public class ClothHistoryService {
         this.colorRecommendHistoryRepository = colorRecommendHistoryRepository;
     }
 
-    public List<ClothHistoryResponse> getClothHistory() {
-        List<ClothHistory> allList = clothHistoryRepository.findAll();
+    public List<ClothHistoryResponse> getClothHistory(String userId) {
+        List<ClothHistory> allList = clothHistoryRepository.findAllByUserId(userId);
         ArrayList<ClothHistoryResponse> responseList = new ArrayList<>();
         for (int i = 0; i < allList.size(); i++) {
             if (allList.get(i) != null) {
@@ -48,7 +48,7 @@ public class ClothHistoryService {
         return new RecommendClothHistory(history.getResult());
     }
 
-    public RecommendColorHistory getColorRecommendHistory(Long id) {
+    public RecommendColorHistory getRecommendColorHistory(Long id) {
         ColorRecommendHistory history = colorRecommendHistoryRepository.findByParentId(id);
         return new RecommendColorHistory(history.getResult());
     }
