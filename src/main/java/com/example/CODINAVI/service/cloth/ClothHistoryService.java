@@ -1,6 +1,11 @@
 package com.example.CODINAVI.service.cloth;
 
-import com.example.CODINAVI.domain.*;
+import com.example.CODINAVI.domain.cloth.ClothHistory;
+import com.example.CODINAVI.domain.cloth.ClothHistoryRepository;
+import com.example.CODINAVI.domain.cloth.RecommendHistory;
+import com.example.CODINAVI.domain.cloth.RecommendHistoryRepository;
+import com.example.CODINAVI.domain.color.ColorRecommendHistory;
+import com.example.CODINAVI.domain.color.ColorRecommendHistoryRepository;
 import com.example.CODINAVI.dto.request.cloth.ClothHistoryRequest;
 import com.example.CODINAVI.dto.request.cloth.ClothRecommendHistoryRequest;
 import com.example.CODINAVI.dto.request.cloth.ColorRecommendHistoryRequest;

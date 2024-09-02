@@ -1,4 +1,4 @@
-package com.example.CODINAVI.domain;
+package com.example.CODINAVI.domain.cloth;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

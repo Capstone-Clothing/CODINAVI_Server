@@ -1,4 +1,4 @@
-package com.example.CODINAVI.domain;
+package com.example.CODINAVI.domain.color;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -2,8 +2,8 @@ package com.example.CODINAVI.service.color;
 
 import com.example.CODINAVI.dto.request.color.ColorRecRequest;
 import com.example.CODINAVI.dto.response.color.ColorRecResponse;
-import com.example.CODINAVI.domain.Color;
-import com.example.CODINAVI.domain.ColorRecRepository;
+import com.example.CODINAVI.domain.color.Color;
+import com.example.CODINAVI.domain.color.ColorRecRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,6 @@
 package com.example.CODINAVI.controller.cloth;
 
-import com.example.CODINAVI.domain.ClothHistory;
-import com.example.CODINAVI.domain.ColorRecommendHistory;
+import com.example.CODINAVI.domain.cloth.ClothHistory;
 import com.example.CODINAVI.dto.request.cloth.ClothHistoryRequest;
 import com.example.CODINAVI.dto.request.cloth.ClothRecommendHistoryRequest;
 import com.example.CODINAVI.dto.request.cloth.ColorRecommendHistoryRequest;

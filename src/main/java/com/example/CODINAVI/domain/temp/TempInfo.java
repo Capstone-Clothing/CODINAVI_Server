@@ -1,4 +1,4 @@
-package com.example.CODINAVI.domain;
+package com.example.CODINAVI.domain.temp;
 
 import jakarta.persistence.*;
 

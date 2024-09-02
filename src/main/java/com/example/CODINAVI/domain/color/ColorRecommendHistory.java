@@ -1,4 +1,4 @@
-package com.example.CODINAVI.domain;
+package com.example.CODINAVI.domain.color;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
