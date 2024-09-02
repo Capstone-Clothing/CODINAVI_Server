@@ -1,10 +1,10 @@
 package com.example.CODINAVI.dto.response.cloth;
 
-public class RecommendColorHistory {
+public class ColorRecommendHistoryResponse {
 
     String result;
 
-    public RecommendColorHistory(String result) {
+    public ColorRecommendHistoryResponse(String result) {
         this.result = result;
     }
 

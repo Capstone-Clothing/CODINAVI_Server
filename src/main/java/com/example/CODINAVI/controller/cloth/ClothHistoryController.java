@@ -5,8 +5,8 @@ import com.example.CODINAVI.dto.request.cloth.ClothHistoryRequest;
 import com.example.CODINAVI.dto.request.cloth.ClothRecommendHistoryRequest;
 import com.example.CODINAVI.dto.request.cloth.ColorRecommendHistoryRequest;
 import com.example.CODINAVI.dto.response.cloth.ClothHistoryResponse;
-import com.example.CODINAVI.dto.response.cloth.RecommendClothHistory;
-import com.example.CODINAVI.dto.response.cloth.RecommendColorHistory;
+import com.example.CODINAVI.dto.response.cloth.ClothRecommendHistoryResponse;
+import com.example.CODINAVI.dto.response.cloth.ColorRecommendHistoryResponse;
 import com.example.CODINAVI.service.cloth.ClothHistoryService;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,12 +27,12 @@ public class ClothHistoryController {
     }
 
     @GetMapping("/cloth/recommendHistory/{id}")
-    public RecommendClothHistory getClothRecommendHistory(@PathVariable Long id) {
+    public ClothRecommendHistoryResponse getClothRecommendHistory(@PathVariable Long id) {
         return clothHistoryService.getRecommendClothHistory(id);
     }
 
     @GetMapping("/cloth/colorRecommendHistory/{id}")
-    public RecommendColorHistory getColorRecommendHistory(@PathVariable Long id) {
+    public ColorRecommendHistoryResponse getColorRecommendHistory(@PathVariable Long id) {
         return clothHistoryService.getRecommendColorHistory(id);
     }
 

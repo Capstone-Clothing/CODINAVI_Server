@@ -10,8 +10,8 @@ import com.example.CODINAVI.dto.request.cloth.ClothHistoryRequest;
 import com.example.CODINAVI.dto.request.cloth.ClothRecommendHistoryRequest;
 import com.example.CODINAVI.dto.request.cloth.ColorRecommendHistoryRequest;
 import com.example.CODINAVI.dto.response.cloth.ClothHistoryResponse;
-import com.example.CODINAVI.dto.response.cloth.RecommendClothHistory;
-import com.example.CODINAVI.dto.response.cloth.RecommendColorHistory;
+import com.example.CODINAVI.dto.response.cloth.ClothRecommendHistoryResponse;
+import com.example.CODINAVI.dto.response.cloth.ColorRecommendHistoryResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -43,14 +43,14 @@ public class ClothHistoryService {
         return responseList;
     }
 
-    public RecommendClothHistory getRecommendClothHistory(Long id) {
+    public ClothRecommendHistoryResponse getRecommendClothHistory(Long id) {
         RecommendHistory history = recommendHistoryRepository.findByParentId(id);
-        return new RecommendClothHistory(history.getResult());
+        return new ClothRecommendHistoryResponse(history.getResult());
     }
 
-    public RecommendColorHistory getRecommendColorHistory(Long id) {
+    public ColorRecommendHistoryResponse getRecommendColorHistory(Long id) {
         ColorRecommendHistory history = colorRecommendHistoryRepository.findByParentId(id);
-        return new RecommendColorHistory(history.getResult());
+        return new ColorRecommendHistoryResponse(history.getResult());
     }
     public ClothHistory saveClothHistory(ClothHistoryRequest request) {
         ClothHistory clothHistory = new ClothHistory(request.getUserId(), request.getColor(), request.getPattern(), request.getType());

@@ -1,10 +1,10 @@
 package com.example.CODINAVI.dto.response.cloth;
 
-public class RecommendClothHistory {
+public class ClothRecommendHistoryResponse {
 
     String result;
 
-    public RecommendClothHistory(String result) {
+    public ClothRecommendHistoryResponse(String result) {
         this.result = result;
     }
 

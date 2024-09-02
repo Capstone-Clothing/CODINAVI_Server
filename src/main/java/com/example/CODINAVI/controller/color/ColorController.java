@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ColorRecController {
+public class ColorController {
 
     private ColorRecService colorRecService;
 
-    public ColorRecController(ColorRecService colorRecService) {
+    public ColorController(ColorRecService colorRecService) {
         this.colorRecService = colorRecService;
     }
 
