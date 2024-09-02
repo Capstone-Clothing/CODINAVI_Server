@@ -12,7 +12,7 @@ public class ClothHistory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long userId;
+    private String userId;
     private String color;
     private String pattern;
     private String type;
@@ -20,7 +20,7 @@ public class ClothHistory {
     public ClothHistory() {
     }
 
-    public ClothHistory(Long userId, String color, String pattern, String type) {
+    public ClothHistory(String userId, String color, String pattern, String type) {
         this.userId = userId;
         this.color = color;
         this.pattern = pattern;
@@ -31,7 +31,7 @@ public class ClothHistory {
         return id;
     }
 
-    public Long getUserId() {
+    public String getUserId() {
         return userId;
     }
 

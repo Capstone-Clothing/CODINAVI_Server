@@ -2,12 +2,12 @@ package com.example.CODINAVI.dto.request.cloth;
 
 public class ClothHistoryRequest {
 
-    private Long userId;
+    private String userId;
     private String color;
     private String pattern;
     private String type;
 
-    public Long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
