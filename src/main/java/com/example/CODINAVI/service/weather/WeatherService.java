@@ -107,6 +107,7 @@ public class WeatherService {
                 }
             }
 
+
             if (category.equals("TMP")) {
 
                 dateList.add(fcstDate);
