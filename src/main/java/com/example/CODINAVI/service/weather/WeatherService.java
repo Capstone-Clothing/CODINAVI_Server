@@ -99,6 +99,7 @@ public class WeatherService {
                     weatherList.add("맑음");
                 } else if (fcstValue.equals("2")) {
                     weatherList.add("비");
+
                 } else if (fcstValue.equals("3")) {
                     weatherList.add("구름많음");
                 } else if (fcstValue.equals("4")) {
